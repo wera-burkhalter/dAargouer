@@ -37,6 +37,3 @@ async function bestellen (bestellurl) {
     anfragen("https://aareguru.existenz.ch/v2018/current?city=").then(results => { // Was macht das?
         console.log(results);
     });
-
-
-
