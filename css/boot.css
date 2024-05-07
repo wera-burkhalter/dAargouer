@@ -1,0 +1,23 @@
+#container {
+    position: relative;
+    width: 229px; /* Width of the SVG */
+    height: 265px; /* Height of the SVG */
+    background-image: url("Images/Schweizer_Karte.png");
+    background-size: cover; /* Ensure the map covers the entire container */
+  }
+
+  #boot {
+    position: absolute;
+    width: 100px; /* Adjust size of the image */
+    height: 60px; /* Adjust size of the image */
+    transition: transform 0.5s ease;
+  }
+
+  #schweizerkarteCt{
+    width: 1012px;
+    height: 701px;
+    display: flex;
+}
+
+
+
