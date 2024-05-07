@@ -67,52 +67,90 @@ anfragen("https://aareguru.existenz.ch/v2018/current?city=").then(results => { /
     });
 });
 
-async function search(stadtFilter) {
-    let searchValue = suchBox.value;
-    let url = `https://aareguru.existenz.ch/v2018/current?city=${searchValue}`;
-    app.innerHTML = '';
-    let aareStadt = await fetchData(url);
-    console.log(aareStadt);
-    console.log(aareStadt.aare.location);
-    }
+// async function search(stadtFilter) {
+//     let searchValue = suchBox.value;
+//     let url = `https://aareguru.existenz.ch/v2018/current?city=${searchValue}`;
+//     app.innerHTML = '';
+//     let aareStadt = await fetchData(url);
+//     console.log(aareStadt);
+//     console.log(aareStadt.aare.location);
+//     }
     
-suchBox.addEventListener('input', search);
+// suchBox.addEventListener('input', search);
 
-function createItem(stadtFilter){
-let item = document.createElement('div');
-item.innerHTML += `<article class="infoBox">
-<img src="Images/${location}.jpg" alt="${location}" class="infoBoxImg">
-<h3 class="infoBoxTitel">${location}</h3>
-<dl class="infoBoxTabelle">
+// function createItem(stadtFilter){
+// let item = document.createElement('div');
+// item.innerHTML += `<article class="infoBox">
+// <img src="Images/${location}.jpg" alt="${location}" class="infoBoxImg">
+// <h3 class="infoBoxTitel">${location}</h3>
+// <dl class="infoBoxTabelle">
 
-    <dt>wassertemparatur</dt>
-    <dd>${temperature}</dd>
-    <dt>lufttemparatur</dt>
-    <dd>${tt}</dd>
-    <dt>badeempfehlung</dt>
-    <dd>${temperature_text}</dd>
-</div>
-</article>`;
-app.appendChild(item);
-}
-
-// function createItem(cocktail) {
-//     let item = document.createElement('div');
-//     item.classList.add('drink');
-//     item.innerHTML = `<h2>${cocktail.strDrink}</h2> 
-//     <img src="${cocktail.strDrinkThumb}" alt="${cocktail.strDrink}">
-//     <p>${cocktail.strInstructions}</p>`;
-    
-//     cocktailApp.appendChild(item);
+//     <dt>wassertemparatur</dt>
+//     <dd>${temperature}</dd>
+//     <dt>lufttemparatur</dt>
+//     <dd>${tt}</dd>
+//     <dt>badeempfehlung</dt>
+//     <dd>${temperature_text}</dd>
+// </div>
+// </article>`;
+// app.appendChild(item);
 // }
 
-async function fetchData(url) {
-    try {
-        let response = await fetch(url);
-        let data = await response.json();
-        return data;
-    }
-    catch (error) {
-        console.log(error);
-    }
+// // function createItem(cocktail) {
+// //     let item = document.createElement('div');
+// //     item.classList.add('drink');
+// //     item.innerHTML = `<h2>${cocktail.strDrink}</h2> 
+// //     <img src="${cocktail.strDrinkThumb}" alt="${cocktail.strDrink}">
+// //     <p>${cocktail.strInstructions}</p>`;
+    
+// //     cocktailApp.appendChild(item);
+// // }
+
+// async function fetchData(url) {
+//     try {
+//         let response = await fetch(url);
+//         let data = await response.json();
+//         return data;
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
+
+
+async function filterLocations() {
+    const input = document.getElementById('search-input');
+    const filterText = input.value.toLowerCase();
+
+    const results = await anfragen("https://aareguru.existenz.ch/v2018/current?city=");
+
+    const filteredResults = results.filter(result => {
+        return result.aare.location.toLowerCase().includes(filterText);
+    });
+
+    displayResults(filteredResults);
+}
+
+function displayResults(results) {
+    const app = document.querySelector("#aare-app");
+    app.innerHTML = ''; // Clear previous results
+
+    results.forEach(result => {
+        let location = result.aare.location;
+        let temperature = result.aare.temperature;
+        let temperature_text = result.aare.temperature_text;
+        let tt = result.weather.current.tt;
+
+        app.innerHTML += `<article class="infoBox">
+            <img src="Images/${location}.jpg" alt="${location}" class="infoBoxImg">
+            <h3 class="infoBoxTitel">${location}</h3>
+            <dl class="infoBoxTabelle">
+                <dt>Wassertemperatur</dt>
+                <dd>${temperature}°C</dd>
+                <dt>Lufttemperatur</dt>
+                <dd>${tt}°C</dd>
+                <dt>Badeempfehlung</dt>
+                <dd>${temperature_text}</dd>
+            </article>`;
+    });
 }
