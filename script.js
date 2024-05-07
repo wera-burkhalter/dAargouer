@@ -52,9 +52,10 @@ anfragen("https://aareguru.existenz.ch/v2018/current?city=").then(results => { /
         let temperature_text = result.aare.temperature_text;
         let tt = result.weather.current.tt;
         app.innerHTML += `<article class="infoBox">
-        <img src="Images/Aarau.jpg" alt="Aarau" class="infoBoxImg">
+        <img src="Images/${location}.jpg" alt="${location}" class="infoBoxImg">
         <h3 class="infoBoxTitel">${location}</h3>
         <dl class="infoBoxTabelle">
+        
             <dt>wassertemparatur</dt>
             <dd>${temperature}</dd>
             <dt>lufttemparatur</dt>
@@ -62,7 +63,7 @@ anfragen("https://aareguru.existenz.ch/v2018/current?city=").then(results => { /
             <dt>badeempfehlung</dt>
             <dd>${temperature_text}</dd>
         </div>
-   </article>`;
+        </article>`;
 
     });
 });
