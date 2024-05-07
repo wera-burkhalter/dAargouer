@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/Muetter.css">
+    <link rel="stylesheet" href="/css/liste.css">
+    <link rel="icon" href="/Images/Aarau.jpg">
 
-<header> 
-    <p class="menu">MAP</p>
-<p class="menu">LIST</p> </header>
+</head>
+
+<body>
+
+
+    <header>
+        <a href="index.html" class="menu">MAP</a>
+            <a href="List.html" class="menu">LIST</a>
+    </header>
+
+    <main>
+        <article class="infoBox">
+            <img src="Images/Aarau.jpg" alt="Aarau" class="infoBoxImg">
+            <h3 class="infoBoxTitel">Aarau</h3>
+            <dl class="infoBoxTabelle">
+                <dt>wassertemparatur</dt>
+                <dd>25°C</dd>
+                <dt>Wasserstand</dt>
+                <dd>1.5m</dd>
+                <dt>lufttemparatur</dt>
+                <dd>25°C</dd>
+                <dt>badeempfehlung</dt>
+                <dd>good to go</dd>
+            </div>
+       </article>
+
+       <table id="aareData">
+        <thead>
+            <tr>
+                <th>Ortsname</th>
+                <th>Wassertemperatur (°C)</th>
+                <th>Lufttemperatur (°C)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Hier werden die Daten eingefügt -->
+        </tbody>
+    </table>
+<div id="aare-app"></div>
+    </main>
+
+    <!-- <script src="script.js"></script> -->
+    <script src="tests.js"></script>
+
 
 </body>

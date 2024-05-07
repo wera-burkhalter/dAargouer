@@ -1,0 +1,33 @@
+main {
+    display: grid;
+    grid-template-columns: 2fr 4fr 1fr;
+    width: 100%;
+}
+
+section {
+height: 80vh;
+}
+
+#infoBoxCt {
+    display: flex;
+    width: 1fr;
+    background-color: lightsalmon;
+    align-items: center;
+    justify-content: center;
+    position: absolute; z-index: 2;
+}
+
+#schweizerkarteCt {
+    display: flex;
+    width: 2fr;
+    background-color: lightseagreen;
+}
+
+#thermometerCt {
+    display: flex;
+    width: 1fr;
+    background-color: lightcoral;
+}
+
+
+.infoBox {"position: relative;"}
