@@ -10,16 +10,17 @@ let currenturl = "https://aareguru.existenz.ch/v2018/current";
 // Funktion zur Durchführung der Anfragen
 async function anfragen(url) {
     try {
-        // Führe eine HTTP-Anfrage durch und warte auf die Antwort
+        
         const anfrage = await fetch(url);
-        // Parste die Antwort als JSON
+        
         return await anfrage.json();
     } catch (e) {
         console.error(e);
-        return []; // Falls ein Fehler auftritt, gib ein leeres Array zurück
+        return []; 
     }
 }
 
+// THERMOMETER
 // Funktion zur Aktualisierung der Temperatur für eine bestimmte Stadt
 function updateTemperature(city) {
     const url = `https://aareguru.existenz.ch/v2018/current?city=${city}`;
@@ -49,27 +50,24 @@ buttons.forEach(button => {
     });
 });
 
-// Führe die Anfragen durch und verarbeite die Ergebnisse
-anfragen(`https://aareguru.existenz.ch/v2018/current?city=${dataset.city}`) // Füge die URL für die Anfrage hinzu}`)
-    .then(results => {
-        console.log(results); // Gib die Ergebnisse in der Konsole aus
-
-        // Verarbeite jedes Ergebnis
-        results.forEach(result => {
-            let ortschaft = result.aare.location;
-            let temperature = result.aare.temperature;
-
-            // Ändere das Aussehen des Thermometers basierend auf der Temperatur
-            thermometerFill.style.height = `${temperature}vh`;
-            thermometerFill.style.backgroundColor = "red";
-
-            // Füge hier die Logik ein, um die Daten anzuzeigen oder zu verwenden
-            console.log(ortschaft);
-            console.log(temperature);
-        });
-    }).catch(error => {
-        console.error("Fehler bei der Anfrage:", error);
-    });
-
 
     
+// SCHWEIZERKARTE MIT PUNKTEN
+const map = document.querySelectorAll('#chmap > *');
+map.forEach((point) => {
+    point.addEventListener('click', () => {
+        showOverlay(point.dataset.city);
+    });
+})
+
+function showOverlay(place) {
+    document.getElementById('overlay').style.display = 'flex';
+    document.getElementById('overlay-title').innerText = place;
+    document.getElementById('overlay-place').innerText = place;
+
+    console.log(place);
+  }
+  
+  function hideOverlay() {
+    document.getElementById('overlay').style.display = 'none';
+  }

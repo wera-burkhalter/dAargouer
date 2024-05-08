@@ -1,16 +1,16 @@
 const app = document.querySelector("#aare-app");
 const suchBox = document.querySelector('#suchBox');
 
-
+// API Verlinkung
 let cities = ["brienz", "interlaken", "thun", "bern", "hagneck", "biel", "olten", "brugg"];
 let currenturl = "https://aareguru.existenz.ch/v2018/current";
 
 async function anfragen(currenturl) {
-    const promises = cities.map(async city => {  // Füge das Schlüsselwort `async` hinzu, um innerhalb von `map` `await` verwenden zu können
+    const promises = cities.map(async city => {  
         const url = `${currenturl}${city}`;
 
         try {
-            const anfrage = await fetch(url);  // Verwende `url` anstelle von `currenturl`
+            const anfrage = await fetch(url);  
             return await anfrage.json();
         } catch (e) {
             console.error(e);
@@ -18,20 +18,19 @@ async function anfragen(currenturl) {
         }
     });
 
-    return Promise.all(promises);  // Warte auf alle Promises, die von `map` zurückgegeben wurden
+    return Promise.all(promises); 
 }
 
-// Zum Aufrufen der Funktion
-anfragen("https://aareguru.existenz.ch/v2018/current?city=").then(results => { // Was macht das?
+
+
+
+// in API Daten anfragen
+anfragen("https://aareguru.existenz.ch/v2018/current?city=").then(results => { 
     console.log(results);
 
-    // console.log(results[0].aare.location);
-    // console.log(results[0].aare.temperature);
-
+// Daten anzeigen in Kachel
     results.forEach(result => {
-        // console.log(result.aare.location);
-        // console.log(result.aare.temperature);
-        // console.log(result.aare.temperature_text);
+
         let location = result.aare.location;
         let temperature = result.aare.temperature;
         let temperature_text = result.aare.temperature_text;
@@ -54,6 +53,8 @@ anfragen("https://aareguru.existenz.ch/v2018/current?city=").then(results => { /
     });
 });
 
+
+// Suchfunktion
 async function filterLocations() {
     const input = document.getElementById('search-input');
     const filterText = input.value.toLowerCase();
@@ -67,6 +68,7 @@ async function filterLocations() {
     displayResults(filteredResults);
 }
 
+// Suchanfrage anzeigen
 function displayResults(results) {
     const app = document.querySelector("#aare-app");
     app.innerHTML = ''; // Clear previous results
@@ -90,7 +92,3 @@ function displayResults(results) {
             </article>`;
     });
 }
-
-
-
-
