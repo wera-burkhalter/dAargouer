@@ -17,11 +17,6 @@ height: 80vh;
     position: absolute; z-index: 2;
 }
 
-#schweizerkarteCt {
-    display: flex;
-    width: 2fr;
-    background-color: lightseagreen;
-}
 
 #thermometerCt {
     display: flex;
@@ -30,4 +25,6 @@ height: 80vh;
 }
 
 
-.infoBox {"position: relative;"}
+/* .infoBox {
+    position: relative;
+} */
