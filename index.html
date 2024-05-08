@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/Muetter.css">
-    <link rel="stylesheet" href="/css/charte.css">
+    <link rel="stylesheet" href="/css/mutter.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
@@ -15,30 +15,50 @@
         <a href="List.html" class="menu">LIST</a>
     </header>
     <main>
-        <section id="infoBoxCt">
+        <!-- <section id="infoBoxCt">
             <article class="infoBox">
-                <img src="Images/Aarau.jpg" alt="Aarau" class="infoBoxImg">
-                <h3 class="infoBoxTitel">Aarau</h3>
-                <dl class="infoBoxTabelle">
-                    <dt>wassertemparatur</dt>
-                    <dd>25°C</dd>
-                    <dt>Wasserstand</dt>
-                    <dd>1.5m</dd>
-                    <dt>lufttemparatur</dt>
-                    <dd>25°C</dd>
-                    <dt>badeempfehlung</dt>
-                    <dd>good to go</dd>
-                    </div>
+
             </article>
         </section>
         <section id="schweizerkarteCt">
-<img src="Images/Schweizerkarte.jpg" alt="Schweizerkarte">
+
+
+        </section> -->
+        <section>
+            <div>
+
+                <p id="brienzBt">Brienz</p>
+                <p id="interlakenBt">Interlaken</p>
+                <p id="thunBt">Thun</p>
+                <p id="bernBt">Bärn</p>
+                <p id="hagneckBt">Hagneck</p>
+                <p id="bielBt">Biel</p>
+                <p id="oltenBt">Olten</p>
+                <p id="bruggBt">Brugg</p>
+
+            </div>
+        </section>
+
+        <section id="thermometerCt">
+
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Standort suchen..." oninput="filterLocations()">
+            </div>
+            <div class="thermometerRahmen">
+
+                <div class="thermometer">
+                    <div id="thermometerFill">lululu</div>
+                </div>
+                <div class="thermometerSkala">
+                </div>
+            </div>
+
 
         </section>
-        <section id="thermometerCt">Platzhalter Thermometer</section>
+
 
     </main>
-    <script src="script.js"></script>
+    <script src="map.js"></script>
 </body>
 
 </html>
