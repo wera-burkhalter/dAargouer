@@ -1,24 +1,130 @@
-#container {
-    position: relative;
-    width: 229px; /* Width of the SVG */
-    height: 265px; /* Height of the SVG */
-    background-image: url("Images/Schweizer_Karte.png");
-    background-size: cover; /* Ensure the map covers the entire container */
-  }
-
-  #boot {
-    position: absolute;
-    width: 100px; /* Adjust size of the image */
-    height: 60px; /* Adjust size of the image */
-    transition: transform 0.5s ease;
-  }
-
-
-  #schweizerkarte{
+  /* #schweizerkarte{
     width: 1012px;
     height: 701px;
     display: flex;
+} */
+
+/* Container für das Bild der Schweizerkarte
+.Schweizerkarte {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: auto;
 }
+
+/* Schweizerkarte */
+/* .swiss-map {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: auto;
+} */
+
+/* Allgemeine Button-Styling */
+/* .punkt {
+  border:none;
+  width: 23px;
+  height: 23px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute; 
+} */
+
+/* Button-Positionen */
+/* #punktBrienz { 
+  top: 40%; 
+  left: 30%;
+}
+#punktInterlaken{ 
+  top: 30%; 
+  left: 40%; 
+  background-color: blueviolet;
+}
+#punktThun { 
+  top: 60%; 
+  left: 25%; 
+  background-color: yellow;
+}
+#punktBern { 
+  top: 70%; 
+  left: 50%; 
+  background-color: green;
+}
+#punktHagneck{ 
+  top: 50%; 
+  left: 70%; 
+  background-color: peru;
+}
+#punktBiel { 
+  top: 80%; 
+  left: 30%; 
+  background-color: black;
+}
+#punktOlten { 
+  top: 35%; 
+  left: 60%; 
+  background-color: brown;
+}
+#punktBrugg { 
+  top: 24.89%; 
+  left: 50.95%;
+  background-color: darkmagenta;
+} */
+
+
+#schweizerKarte {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container für das Boot */
+#container {
+  position: relative;
+  width: 800px; /* Passe dies an deine Bedürfnisse an */
+  height: 400px; /* Passe dies an deine Bedürfnisse an */
+}
+
+/* Das Boot, das animiert wird */
+#boot {
+  position: absolute;
+  width: 30%;
+  height: 20%; /* Größe des Boots *//* Größe des Boots */
+  background-image: url('../Images/Boot.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  offset-path: path('M190 243L151.5 264H132.5L113 250L98 233L84 208.5L75.5 188L60.5 174.5L52 167.5H40H31.5L19.5 163L13.5 156.5L19.5 144.5L15.5 140L6 135.5H1.5L3.5 127L13.5 117.5L28 109L40 107L52 101.5L63 91L70.5 88H77.5L82 91L84 88L90 84L98 81.5H111H127.5L140 74.5L151.5 62L175 41.5L190 26L199 23H207.5H213.5L217 16V6L222 1H229');
+  animation-name: pfad;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  /* animation-iteration-count: infinite; */
+  animation-direction: alternate;
+}
+
+/* Pfad-Animation */
+@keyframes pfad {
+  0% {
+      offset-distance: 0%;
+  }
+  100% {
+      offset-distance: 100%;
+  }
+}
+
+
+
+
 
 
 
