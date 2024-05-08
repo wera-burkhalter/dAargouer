@@ -23,12 +23,15 @@ async function anfragen(url) {
 // Funktion zur Aktualisierung der Temperatur für eine bestimmte Stadt
 function updateTemperature(city) {
     const url = `https://aareguru.existenz.ch/v2018/current?city=${city}`;
+
     anfragen(url).then(results => {
         console.log(results.aare.temperature);
-        
+         thermometerFill.innerHTML ='';
             const temperature = results.aare.temperature;
-            thermometerFill.innerHTML = temperature;
-            thermometerFill.style.height = `${temperature}vh`;
+            thermometerFill.innerHTML += `<div> ${temperature} </div>`;
+            let thermoLiquid = temperature * 2;
+            thermometerFill.style.height = `${thermoLiquid}%`;
+            thermometerFill.style.backgroundColor = "red"; 
 
     }).catch(error => {
         console.error(`Fehler bei der Anfrage für ${city}:`, error);

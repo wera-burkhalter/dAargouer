@@ -20,10 +20,40 @@ height: 80vh;
 
 #thermometerCt {
     display: flex;
-    width: 1fr;
+    flex-direction: column;
+    width: 100px;
+    height: 90vh;
     background-color: lightcoral;
+    justify-content: center;
+    align-items: center;
 }
 
+.thermometerRahmen {
+    display: flex;
+    height: 80vh;
+    width: 90px;
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+}
+.thermometer {
+    display: flex;
+    height: 70vh;
+    width: 80px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+#thermometerFill{
+    width: 25px;
+}
+
+#thermoAnzeige{
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+ 
+}
 
 /* .infoBox {
     position: relative;
