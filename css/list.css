@@ -1,6 +1,12 @@
+body{
+    background-color: rgb(232, 250, 234);
+
+}
+
 main { display: flex;
 flex-direction: column;
 flex-wrap: wrap;}
+
 
 #aare-app { display: flex;
 flex-direction: row;

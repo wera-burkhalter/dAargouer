@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(206, 231, 248);
+}
 main {
     display: grid;
     grid-template-columns: 2fr 4fr 1fr;
