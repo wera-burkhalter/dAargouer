@@ -2,6 +2,7 @@
 const thermometerFill = document.querySelector('#thermometerFill');
 const app = document.querySelector("#aare-app");
 const suchBox = document.querySelector('#suchBox');
+const closeOverlay = document.querySelector('#close-overlay');
 
 // Definiere die Städte und die URL für die Anfragen
 let cities = ["brienz", "interlaken", "thun", "bern", "hagneck", "biel", "olten", "brugg"];
@@ -12,7 +13,7 @@ async function anfragen(url) {
     try {
         
         const anfrage = await fetch(url);
-        
+
         return await anfrage.json();
     } catch (e) {
         console.error(e);
@@ -56,9 +57,10 @@ buttons.forEach(button => {
 const map = document.querySelectorAll('#chmap > *');
 map.forEach((point) => {
     point.addEventListener('click', () => {
-        showOverlay(point.dataset.city);
+        const city = point.dataset.city;
+        showOverlay(city);
     });
-})
+});
 
 function showOverlay(place) {
     document.getElementById('overlay').style.display = 'flex';
@@ -68,6 +70,62 @@ function showOverlay(place) {
     console.log(place);
   }
   
-  function hideOverlay() {
+
+closeOverlay.addEventListener('click', hideOverlay);
+
+function hideOverlay() {
     document.getElementById('overlay').style.display = 'none';
   }
+
+  // in API Daten anfragen
+// anfragen("https://aareguru.existenz.ch/v2018/current?city=").then(results => { 
+//     console.log(results);
+
+// // Daten anzeigen in Kachel
+//     results.forEach(result => {
+
+//         let location = result.aare.location;
+//         let temperature = result.aare.temperature;
+//         let temperature_text = result.aare.temperature_text;
+//         let tt = result.weather.current.tt;
+//         app.innerHTML += `<article class="infoBox">
+//         <img src="Images/${location}.jpg" alt="${location}" class="infoBoxImg">
+//         <h3 class="infoBoxTitel">${location}</h3>
+//         <dl class="infoBoxTabelle">
+        
+//             <dt>Wasser in °C</dt>
+//             <dd>${temperature}</dd>
+//             <dt>Luft in °C</dt>
+//             <dd>${tt}</dd>
+//             <dt>Bade?</dt>
+//             <dd>${temperature_text}</dd>
+//             </dl>
+//         </div>
+//         </article>`;
+
+//     });
+// });
+
+anfragen("https://aareguru.existenz.ch/v2018/current").then(results => {
+    console.log(results);
+
+    results.forEach(result => {
+        let location = result.aare.location;
+        let temperature = result.aare.temperature;
+        let temperature_text = result.aare.temperature_text;
+        let tt = result.weather.current.tt;
+
+        app.innerHTML += `<article class="infoBox">
+            <img src="Images/${location}.jpg" alt="${location}" class="infoBoxImg">
+            <h3 class="infoBoxTitel">${location}</h3>
+            <dl class="infoBoxTabelle">
+                <dt>Wasser in °C</dt>
+                <dd>${temperature}</dd>
+                <dt>Luft in °C</dt>
+                <dd>${tt}</dd>
+                <dt>Bade?</dt>
+                <dd>${temperature_text}</dd>
+            </dl>
+        </article>`;
+    });
+});
