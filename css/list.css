@@ -13,6 +13,13 @@ flex-direction: row;
 flex-wrap:wrap;
 justify-content: center;}
 
+#search-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;    /* Abstand oben innerhalb des Containers */
+    padding-bottom: 50px;
+}
+
 /* #search-container{ display: flex;
 flex-direction: row;
 flex-wrap: wrap;
