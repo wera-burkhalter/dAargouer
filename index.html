@@ -45,17 +45,17 @@
             </section>
 
         <div id="container">
-            <div id="boot"></div>
+            <!-- <div id="boot"></div> -->
 
         <img src="Images/Schweizer_Karte.png" id="schweizerKarte" alt="Schweizerkarte" usemap="#chmap">
         <map name="chmap" id="chmap">
-            <area shape="circle" coords="387,120,20" id="punktBrugg">
-            <area shape="circle" coords="328,160,20" id="punktOlten" href="List.html">
-            <area shape="circle" coords="230,191,20" id="punktBiel" href="List.html">
-            <area shape="circle" coords="215,213,20" id="punktHagneck" href="List.html">
-            <area shape="circle" coords="269,242,20" id="punktBern" href="List.html">
-            <area shape="circle" coords="302,294,20" id="punktThun" href="List.html">
-            <area shape="circle" coords="338,306,20" id="punktInterlaken" href="List.html">
+            <area shape="circle" coords="387,120,20" data-city="brugg" id="punktBrugg">
+            <area shape="circle" coords="328,160,20" data-city="olten" id="punktOlten">
+            <area shape="circle" coords="230,191,20" data-city="biel" id="punktBiel">
+            <area shape="circle" coords="215,213,20" data-city="hagneck" id="punktHagneck">
+            <area shape="circle" coords="269,242,20" data-city="bern" id="punktBern" >
+            <area shape="circle" coords="302,294,20" data-city="thun" id="punktThun" >
+            <area shape="circle" coords="338,306,20" data-city="interlaken" id="punktInterlaken" >
             <area shape="circle" coords="371,288,20" data-city="brienz" id="punktBrienz">
         </map>
 
@@ -63,14 +63,13 @@
             <div id="overlay-content">
                 <h2 id="overlay-title"></h2>
                 <p>Mehr Informationen zu <span id="overlay-place"></span>.</p>
-                <button id="close-overlay" onclick="hideOverlay()">Schließen</button>
+                <button id="close-overlay">Schließen</button>
             </div>
         </div>
 
 
     </main>
     <script src="map.js"></script>
-    <script src="boot.js"></script>
 </body>
 
 </html>

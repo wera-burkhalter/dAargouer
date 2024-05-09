@@ -1,88 +1,13 @@
-  /* #schweizerkarte{
-    width: 1012px;
-    height: 701px;
-    display: flex;
-} */
-
-/* Container für das Bild der Schweizerkarte
-.Schweizerkarte {
-  position: relative;
-  width: 100%;
-  height: auto;
-  margin: auto;
-}
-
-/* Schweizerkarte */
-/* .swiss-map {
-  position: relative;
-  width: 100%;
-  height: auto;
-  margin: auto;
-} */
-
-/* Allgemeine Button-Styling */
-/* .punkt {
-  border:none;
-  width: 23px;
-  height: 23px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute; 
-} */
-
-/* Button-Positionen */
-/* #punktBrienz { 
-  top: 40%; 
-  left: 30%;
-}
-#punktInterlaken{ 
-  top: 30%; 
-  left: 40%; 
-  background-color: blueviolet;
-}
-#punktThun { 
-  top: 60%; 
-  left: 25%; 
-  background-color: yellow;
-}
-#punktBern { 
-  top: 70%; 
-  left: 50%; 
-  background-color: green;
-}
-#punktHagneck{ 
-  top: 50%; 
-  left: 70%; 
-  background-color: peru;
-}
-#punktBiel { 
-  top: 80%; 
-  left: 30%; 
-  background-color: black;
-}
-#punktOlten { 
-  top: 35%; 
-  left: 60%; 
-  background-color: brown;
-}
-#punktBrugg { 
-  top: 24.89%; 
-  left: 50.95%;
-  background-color: darkmagenta;
-} */
-
-
 #schweizerKarte{
   width: 100%;
 }
 
 
-
 /* Container für das Boot */
 #container {
   position: relative;
-  width: 800px; /* Passe dies an deine Bedürfnisse an */
-  height: 400px; /* Passe dies an deine Bedürfnisse an */
+  width: 800px; 
+  height: 400px;
 }
 
 /* Das Boot, das animiert wird */
