@@ -40,25 +40,26 @@ function updateTemperature(city) {
     });
 }
 
-// Selektiere die Button-Elemente für jede Stadt
-const buttons = document.querySelectorAll('.city-button');
+// // Selektiere die Button-Elemente für jede Stadt
+// const buttons = document.querySelectorAll('.city-button');
 
-// Füge für jeden Button den Event-Listener hinzu
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        const selectedCity = button.dataset.city;
-        updateTemperature(selectedCity);
-    });
-});
+// // Füge für jeden Button den Event-Listener hinzu
+// buttons.forEach(button => {
+//     button.addEventListener('click', () => {
+//         const selectedCity = button.dataset.city;
+//         updateTemperature(selectedCity);
+//     });
+// });
 
 
     
 // SCHWEIZERKARTE MIT PUNKTEN
 const map = document.querySelectorAll('#chmap > *');
 map.forEach((point) => {
-    point.addEventListener('click', () => {
+    point.addEventListener('click', (event) => {
         const city = point.dataset.city;
         showOverlay(city);
+        updateTemperature(city); // Aktualisiere Temperatur beim Klick auf einen Punkt
     });
 });
 
@@ -67,15 +68,15 @@ function showOverlay(place) {
     document.getElementById('overlay-title').innerText = place;
     document.getElementById('overlay-place').innerText = place;
 
-    console.log(place);
-  }
-  
+    // Füge das Update der Temperatur hinzu
+    updateTemperature(place);  // Ruft die Funktion auf, die die Temperatur aktualisiert
+}
 
 closeOverlay.addEventListener('click', hideOverlay);
 
 function hideOverlay() {
     document.getElementById('overlay').style.display = 'none';
-  }
+}
 
   // in API Daten anfragen
 // anfragen("https://aareguru.existenz.ch/v2018/current?city=").then(results => { 
