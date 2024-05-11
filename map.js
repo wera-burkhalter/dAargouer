@@ -51,7 +51,6 @@ function updateTemperature(city) {
 //     });
 // });
 
-
     
 // SCHWEIZERKARTE MIT PUNKTEN
 const map = document.querySelectorAll('#chmap > *');
