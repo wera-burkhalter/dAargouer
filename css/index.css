@@ -1,6 +1,7 @@
-body{
+body {
     background-color: rgb(206, 231, 248);
 }
+
 main {
     display: grid;
     grid-template-columns: 2fr 4fr 1fr;
@@ -8,7 +9,7 @@ main {
 }
 
 section {
-height: 80vh;
+    height: 80vh;
 }
 
 #infoBoxCt {
@@ -17,7 +18,8 @@ height: 80vh;
     background-color: lightsalmon;
     align-items: center;
     justify-content: center;
-    position: absolute; z-index: 2;
+    position: absolute;
+    z-index: 2;
 }
 
 
@@ -25,8 +27,7 @@ height: 80vh;
     display: flex;
     flex-direction: column;
     width: 100px;
-    height: 90vh;
-    background-color: lightcoral;
+    height: 90vh;;
     justify-content: center;
     align-items: center;
 }
@@ -39,23 +40,61 @@ height: 80vh;
     justify-content: center;
     align-items: center;
 }
+
 .thermometer {
     display: flex;
+    flex-direction: column;
     height: 70vh;
-    width: 80px;
+    width: 120px;
     background-color: white;
     justify-content: center;
     align-items: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 30px;
 }
-#thermometerFill{
-    width: 25px;
+#thermometerFillSkala {
+    width: 90%;
+    height: 90%;
+display: flex;
+flex-direction: row;
+margin: 50px;
+justify-content: space-around;
+
+}
+#thermometerSkala {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 20px;
+    border-radius: 20px;   
+    font-size: 20px;
 }
 
-#thermoAnzeige{
+#thermometerFill {
+    width: 33%;
+    height: 3vh;
+    border-radius: 20px;
+    align-self: flex-end;
+    background-color: red;
+}
+
+#thermoAnzeige {
     display: flex;
     align-self: flex-start;
     justify-content: center;
- 
+
+}
+
+.thermometerZahlCss {
+    font-weight: bold;
+    margin-bottom: 2vh;
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+
 }
 
 /* .infoBox {

@@ -3,6 +3,7 @@ const thermometerFill = document.querySelector('#thermometerFill');
 const app = document.querySelector("#aare-app");
 const suchBox = document.querySelector('#suchBox');
 const closeOverlay = document.querySelector('#close-overlay');
+const thermometerZahl = document.querySelector('#thermometerZahl');
 
 // Definiere die Städte und die URL für die Anfragen
 let cities = ["brienz", "interlaken", "thun", "bern", "hagneck", "biel", "olten", "brugg"];
@@ -11,13 +12,13 @@ let currenturl = "https://aareguru.existenz.ch/v2018/current";
 // Funktion zur Durchführung der Anfragen
 async function anfragen(url) {
     try {
-        
+
         const anfrage = await fetch(url);
 
         return await anfrage.json();
     } catch (e) {
         console.error(e);
-        return []; 
+        return [];
     }
 }
 
@@ -28,17 +29,18 @@ function updateTemperature(city) {
 
     anfragen(url).then(results => {
         console.log(results.aare.temperature);
-         thermometerFill.innerHTML ='';
-            const temperature = results.aare.temperature;
-            thermometerFill.innerHTML += `<div> ${temperature} </div>`;
-            let thermoLiquid = temperature * 2;
-            thermometerFill.style.height = `${thermoLiquid}%`;
-            thermometerFill.style.backgroundColor = "red"; 
-
+        thermometerFill.innerHTML = '';
+        thermometerZahl.innerHTML = '';
+        const temperature = results.aare.temperature;
+        thermometerZahl.innerHTML += `<div> ${temperature} </div>`;
+        let thermoLiquid = temperature * 2.5;
+        thermometerFill.style.height = `${thermoLiquid}%`;
+        thermometerFill.style.backgroundColor = "red";
     }).catch(error => {
         console.error(`Fehler bei der Anfrage für ${city}:`, error);
     });
 }
+
 
 // // Selektiere die Button-Elemente für jede Stadt
 // const buttons = document.querySelectorAll('.city-button');
@@ -51,7 +53,7 @@ function updateTemperature(city) {
 //     });
 // });
 
-    
+
 // SCHWEIZERKARTE MIT PUNKTEN
 const map = document.querySelectorAll('#chmap > *');
 map.forEach((point) => {
@@ -77,7 +79,7 @@ function hideOverlay() {
     document.getElementById('overlay').style.display = 'none';
 }
 
-  // in API Daten anfragen
+// in API Daten anfragen
 // anfragen("https://aareguru.existenz.ch/v2018/current?city=").then(results => { 
 //     console.log(results);
 
@@ -92,7 +94,7 @@ function hideOverlay() {
 //         <img src="Images/${location}.jpg" alt="${location}" class="infoBoxImg">
 //         <h3 class="infoBoxTitel">${location}</h3>
 //         <dl class="infoBoxTabelle">
-        
+
 //             <dt>Wasser in °C</dt>
 //             <dd>${temperature}</dd>
 //             <dt>Luft in °C</dt>

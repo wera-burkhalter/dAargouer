@@ -32,42 +32,64 @@
             </div>
         </section> -->
 
-        
-        
-            <section id="thermometerCt">
 
-                <div class="thermometerRahmen">
-    
-                    <div class="thermometer">
-                        <div id="thermometerFill">lululu</div>
+
+        <section id="thermometerCt">
+
+            <!-- <div class="thermometerRahmen"> -->
+
+            <div class="thermometer">
+                <div id="thermometerFillSkala">
+                    <div id="thermometerFill"></div>
+                    <div id="thermometerSkala">
+
+
+                        <div>40</div>
+                        <div>35</div>
+                        <div>30</div>
+                        <div>25</div>
+                        <div>20</div>
+                        <div>15</div>
+                        <div>10</div>
+                        <div>5</div>
+                        <div>0</div>
+
+
+
                     </div>
+
                 </div>
-            </section>
+                <div class="thermometerZahlCss">
+                <div id="thermometerZahl" >00</div> 
+                <div>ºC</div>
+            </div>
+        </div>
+            <!-- </div> -->
+        </section>
 
         <div id="container">
             <!-- <div id="boot"></div> -->
 
-        <img src="Images/Schweizer_Karte.png" id="schweizerKarte" alt="Schweizerkarte" usemap="#chmap">
-        <map name="chmap" id="chmap">
-            <area shape="circle" coords="387,120,20" data-city="brugg" id="punktBrugg">
-            <area shape="circle" coords="328,160,20" data-city="olten" id="punktOlten">
-            <area shape="circle" coords="230,191,20" data-city="biel" id="punktBiel">
-            <area shape="circle" coords="215,213,20" data-city="hagneck" id="punktHagneck">
-            <area shape="circle" coords="269,242,20" data-city="bern" id="punktBern" >
-            <area shape="circle" coords="302,294,20" data-city="thun" id="punktThun" >
-            <area shape="circle" coords="338,306,20" data-city="interlaken" id="punktInterlaken" >
-            <area shape="circle" coords="371,288,20" data-city="brienz" id="punktBrienz">
-        </map>
-        
+            <img src="Images/Schweizer_Karte.png" id="schweizerKarte" alt="Schweizerkarte" usemap="#chmap">
+            <map name="chmap" id="chmap">
+                <area shape="circle" coords="387,120,20" data-city="brugg" id="punktBrugg">
+                <area shape="circle" coords="328,160,20" data-city="olten" id="punktOlten">
+                <area shape="circle" coords="230,191,20" data-city="biel" id="punktBiel">
+                <area shape="circle" coords="215,213,20" data-city="hagneck" id="punktHagneck">
+                <area shape="circle" coords="269,242,20" data-city="bern" id="punktBern">
+                <area shape="circle" coords="302,294,20" data-city="thun" id="punktThun">
+                <area shape="circle" coords="338,306,20" data-city="interlaken" id="punktInterlaken">
+                <area shape="circle" coords="371,288,20" data-city="brienz" id="punktBrienz">
+            </map>
 
-        <div id="overlay">
-            <div id="overlay-content">
-                <h2 id="overlay-title"></h2>
-                <span id="overlay-place"></span>
-                <button id="close-overlay">Schließen</button>
+
+            <div id="overlay">
+                <div id="overlay-content">
+                    <h2 id="overlay-title"></h2>
+                    <span id="overlay-place"></span>
+                    <button id="close-overlay">Schließen</button>
+                </div>
             </div>
-        </div>
-
 
     </main>
     <script src="map.js"></script>
