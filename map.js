@@ -35,7 +35,22 @@ function updateTemperature(city) {
         thermometerZahl.innerHTML += `<div> ${temperature} </div>`;
         let thermoLiquid = temperature * 2.5;
         thermometerFill.style.height = `${thermoLiquid}%`;
-        thermometerFill.style.backgroundColor = "red";
+        // thermometerFill.style.backgroundColor = "red";
+        if (temperature < 10) {
+            thermometerFill.style.backgroundColor = "blue"
+          } else if (temperature < 18) {
+            thermometerFill.style.backgroundColor = "lightblue"
+          }
+          else if (temperature < 25) {
+            thermometerFill.style.backgroundColor = "green"
+          }
+        else if (temperature < 30) {
+            thermometerFill.style.backgroundColor = "orange"
+          }
+         else {
+            thermometerFill.style.backgroundColor = "red"
+          }
+
     }).catch(error => {
         console.error(`Fehler bei der Anfrage für ${city}:`, error);
     });
