@@ -7,7 +7,7 @@
 #container {
   position: relative;
   width: 800px; 
-  height: 400px;
+  /* height: 400px; */
 }
 
 /* Das Boot, das animiert wird */
