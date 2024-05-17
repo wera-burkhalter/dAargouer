@@ -38,23 +38,54 @@ function updateTemperature(city) {
         // thermometerFill.style.backgroundColor = "red";
         if (temperature < 10) {
             thermometerFill.style.backgroundColor = "blue"
-          } else if (temperature < 18) {
+        } else if (temperature < 15) {
             thermometerFill.style.backgroundColor = "lightblue"
-          }
-          else if (temperature < 25) {
+        }
+        else if (temperature < 25) {
             thermometerFill.style.backgroundColor = "green"
-          }
+        }
         else if (temperature < 30) {
             thermometerFill.style.backgroundColor = "orange"
-          }
-         else {
+        }
+        else {
             thermometerFill.style.backgroundColor = "red"
-          }
+        }
 
     }).catch(error => {
         console.error(`Fehler bei der Anfrage für ${city}:`, error);
     });
 }
+
+function infoBox(city) {
+    const url = `https://aareguru.existenz.ch/v2018/current?city=${city}`;
+
+    anfragen(url).then(results => {
+        console.log(results.aare.location)
+        app.innerHTML = ``;
+        let location = results.aare.location;
+        let temperature = results.aare.temperature;
+        let temperature_text = results.aare.temperature_text;
+        let tt = results.weather.current.tt;
+
+        app.innerHTML += `
+            <article class="infoBox">
+                <img src="Images/${location}.jpg" alt="${location}" class="infoBoxImg">
+                <h3 class="infoBoxTitel">${location}</h3>
+                <dl class="infoBoxTabelle">
+                    <dt>Wasser in °C</dt>
+                    <dd>${temperature}</dd>
+                    <dt>Luft in °C</dt>
+                    <dd>${tt}</dd>
+                    <dt>Bade?</dt>
+                    <dd>${temperature_text}</dd>
+                </dl>
+            </article>`;
+    }).catch(error => {
+        console.error('Error fetching data:', error);
+    });
+}
+
+
 
 
 // // Selektiere die Button-Elemente für jede Stadt
@@ -76,6 +107,7 @@ map.forEach((point) => {
         const city = point.dataset.city;
         showOverlay(city);
         updateTemperature(city); // Aktualisiere Temperatur beim Klick auf einen Punkt
+        infoBox(city);
     });
 });
 
@@ -123,26 +155,3 @@ function hideOverlay() {
 //     });
 // });
 
-anfragen("https://aareguru.existenz.ch/v2018/current").then(results => {
-    console.log(results);
-
-    results.forEach(result => {
-        let location = result.aare.location;
-        let temperature = result.aare.temperature;
-        let temperature_text = result.aare.temperature_text;
-        let tt = result.weather.current.tt;
-
-        app.innerHTML += `<article class="infoBox">
-            <img src="Images/${location}.jpg" alt="${location}" class="infoBoxImg">
-            <h3 class="infoBoxTitel">${location}</h3>
-            <dl class="infoBoxTabelle">
-                <dt>Wasser in °C</dt>
-                <dd>${temperature}</dd>
-                <dt>Luft in °C</dt>
-                <dd>${tt}</dd>
-                <dt>Bade?</dt>
-                <dd>${temperature_text}</dd>
-            </dl>
-        </article>`;
-    });
-});
