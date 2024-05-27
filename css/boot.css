@@ -1,5 +1,7 @@
 #schweizerKarte{
+  display: block;
   width: 100%;
+  height: auto;
 }
 
 
@@ -7,34 +9,24 @@
 #container {
   position: relative;
   width: 800px; 
-  /* height: 400px; */
+  height: 554.51px;
 }
 
-/* Das Boot, das animiert wird */
-#boot {
-  position: absolute;
-  width: 30%;
-  height: 20%; /* Größe des Boots *//* Größe des Boots */
-  background-image: url('../Images/Boot.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  offset-path: path('M190 243L151.5 264H132.5L113 250L98 233L84 208.5L75.5 188L60.5 174.5L52 167.5H40H31.5L19.5 163L13.5 156.5L19.5 144.5L15.5 140L6 135.5H1.5L3.5 127L13.5 117.5L28 109L40 107L52 101.5L63 91L70.5 88H77.5L82 91L84 88L90 84L98 81.5H111H127.5L140 74.5L151.5 62L175 41.5L190 26L199 23H207.5H213.5L217 16V6L222 1H229');
-  animation-name: pfad;
-  animation-duration: 8s;
-  animation-timing-function: ease-in-out;
-  /* animation-iteration-count: infinite; */
-  animation-direction: alternate;
+#boat {
+  width: 10%; 
+  position: absolute; /* Positionierung auf der Seite */
+  left: 390px; /* Startposition horizontal */
+  top: 290px; /* Startposition vertikal */
+  transform: rotate(10deg); /* Startrotation */
 }
 
-/* Pfad-Animation */
-@keyframes pfad {
-  0% {
-      offset-distance: 0%;
-  }
-  100% {
-      offset-distance: 100%;
-  }
+
+.mapPunkt {
+  cursor: pointer;
 }
+
+
+
 
 
 
