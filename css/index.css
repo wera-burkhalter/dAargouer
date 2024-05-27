@@ -12,6 +12,12 @@ section {
     height: 80vh;
 }
 
+
+.header-bild {
+    width: 107px;
+    height: 99px;
+}
+
 #infoBoxCt {
     display: flex;
     width: 1fr;
@@ -86,8 +92,8 @@ justify-content: space-around;
     font-size: 2em;
     display: flex;
     flex-direction: row;
-
 }
+
 
 
 /* .infoBox {
