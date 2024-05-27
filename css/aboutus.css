@@ -1,8 +1,9 @@
 body {
+    background-color: rgb(209, 200, 235);
+    box-sizing: border-box;
     width: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 main {
@@ -89,6 +90,17 @@ h2 {
     font-size: 28px;
     font-weight: 400;
 }
+
+/* "Grundaussehen" für den Footer */
+footer {
+    background-color: rgb(91, 71, 153);
+    color: rgb(192, 183, 220);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2vw 1vw;
+    margin-top: 5vw;
+}
+
 
 @media (max-width: 600px) {
     .member {
