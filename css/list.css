@@ -1,6 +1,8 @@
 body{
     background-color: rgb(232, 250, 234);
-
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 main { display: flex;
@@ -10,6 +12,7 @@ flex-wrap: wrap;}
 .header-bild {
     width: 107px;
     height: 99px;
+    margin: 10px;
 }
 
 #aare-app { display: flex;
@@ -40,7 +43,8 @@ input {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 15vw;
+    width: 40%;
+    max-width: 600px;
     height: 5vh;
 
     border-radius: 20px;
@@ -51,11 +55,12 @@ input {
     border-color: rgb(40, 51, 41);
     border-style: solid;
     border-width: 5px;
-    border-radius: 20px;
 
     font-family: 'europa', sans-serif;
     font-size: 1.5vw;
     color: rgb(70, 92, 72);
+
+    box-sizing: border-box;
 }
 
 h1 {
@@ -70,4 +75,82 @@ p{
     font-style: normal;
     font-size: 20%;
     font-weight: 400;
+}
+
+/* "Grundaussehen" für den Footer */
+footer {
+    background-color: rgb(70, 92, 72);
+    color: rgb(162, 201, 165);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    margin-top: 50px;
+}
+
+/* Aussehen Inhalt */
+.footer-content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* Aussehen Logo */
+.footer-logo {
+    width: 20vw;
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Aussehen Text */
+.footer-text {
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 10px;
+}
+
+/* Aussehen Links */
+.footer-links {
+    font-family: cubano, sans-serif; 
+    text-align: right;
+}
+.footer-links a {
+    display: block;
+    color: rgb(162, 201, 165);
+    margin: 5px 0;
+    font-size: 4vw;
+}
+
+/* Anpassungen für grosse Bildschirme */
+@media (min-width: 600px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-logo {
+        width: 100px; 
+        margin-bottom: 0; 
+    }
+    .footer-text {
+        font-size: 1.5em; 
+        margin-bottom: 0; 
+    }
+    .footer-links {
+        text-align: right; 
+    }
+    .footer-links a {
+        font-size: 1em; 
+    }
+}
+
+/*Anpassungen für kleine Bildschirme*/
+@media (max-width: 600px){
+    input {
+        width: 60%;
+        font-size: 4vw;
+    }
+
 }
