@@ -75,7 +75,7 @@ p{
 
 
 /* Anpassungen für grosse Bildschirme */
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
     .footer-content {
         flex-direction: row;
         justify-content: space-between;
@@ -86,22 +86,22 @@ p{
         margin-bottom: 0; 
     }
     .footer-text {
-        font-size: 1.5em; 
+        font-size: 1.5vw; 
         margin-bottom: 0; 
     }
     .footer-links {
         text-align: right; 
     }
     .footer-links a {
-        font-size: 1em; 
+        font-size: 1vw; 
     }
-}
+} */
 
 /*Anpassungen für kleine Bildschirme*/
-@media (max-width: 600px){
+/* @media (max-width: 600px){
     input {
         width: 60%;
         font-size: 4vw;
     }
 
-}
+} */

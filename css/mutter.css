@@ -107,6 +107,12 @@ h1 {
     height: 99px;
     margin: 10px;
 }
+/*
+.header-bild {
+    width: 8.00vw;
+    height: 7.40vw;
+    margin: 0.75vw;
+}*/
 
 
 /* "Grundaussehen" für den Footer */
@@ -115,8 +121,8 @@ footer {
     color: rgb(162, 201, 165);
     width: 100%;
     box-sizing: border-box;
-    padding: 20px 10px;
-    margin-top: 50px;
+    padding: 2vw 1vw;
+    margin-top: 5vw;
 }
 
 /* Aussehen Inhalt */
@@ -125,33 +131,39 @@ footer {
     flex-direction: column; 
     align-items: center; 
     margin: 0 auto; 
-    padding: 0 150px; 
+    padding: 0 15vw; 
 }
 
 /* Aussehen Logo */
 .footer-logo {
     width: 20vw;
-    max-width: 100px;
+    max-width: 10vw;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 1vw;
 }
 
 /* Aussehen Text */
 .footer-text {
     text-align: center;
     font-size: 4vw;
-    margin-bottom: 10px;
+    margin-bottom: 1vw;
+}
+
+/* Aussehen Link im Text*/
+.footer-text a {
+    color: rgb(162, 201, 165); 
 }
 
 /* Aussehen Links */
 .footer-links {
     font-family: cubano, sans-serif; 
-    text-align: right;
+    text-align: center;
+    width: 100%
 }
 .footer-links a {
     display: block;
     color: rgb(162, 201, 165);
-    margin: 5px 0;
+    margin: 0.5vw 0;
     font-size: 4vw;
 }
 
@@ -167,13 +179,24 @@ footer {
         margin-bottom: 0; 
     }
     .footer-text {
-        font-size: 1.5em; 
+        font-size: 1.5vw; 
         margin-bottom: 0; 
     }
     .footer-links {
-        text-align: right; 
+        text-align: right;
+        width: auto; 
     }
     .footer-links a {
-        font-size: 1em; 
+        font-size: 1vw; 
     }
+}
+/*Anpassungen für kleine Bildschirme*/
+@media (max-width: 600px){
+
+    .footer-links {
+        text-align: center;
+        width: 100%;
+    }
+  
+
 }
