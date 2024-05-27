@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80vw;
+    align-self: center;
 }
 
 .member {
@@ -9,11 +11,18 @@
     flex-direction: row;
     align-self: center;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
 
 .memberReverse {
     display: flex;
     flex-direction: row-reverse;
+    align-self: center;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -22,6 +31,8 @@
     border-radius: 50%;
     border: 2px solid black;
     height: 20vw;
+    max-height: 300px;
+    min-height: 180px;
     margin-right: 20px;
     aspect-ratio: 1/1;
 
@@ -31,12 +42,15 @@
     border-radius: 50%;
     border: 2px solid black;
     height: 20vw;
+    max-height: 300px;
+    min-height: 180px;
     margin-right: 20px;
     aspect-ratio: 1/1;
 }
 
 .memberText {
-    align-items: left  ;
+    align-items: left;
+    max-width: 500px;
 }
 
 .memberTextReverse {
@@ -61,5 +75,6 @@
 
 h3{
 text-align: start;
+font-size: 28px;
     
 }

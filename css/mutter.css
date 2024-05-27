@@ -1,6 +1,5 @@
 body {
     background-color: rgb(232, 250, 234);
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -39,7 +38,7 @@ main {
 
 p {
     font-size: 20px;
-    font-family: cubano, sans-serif;
+    font-family: europe, sans-serif;
     margin: 0;
 }
 
@@ -98,6 +97,13 @@ h1 {
     font-family: cubano, sans-serif;
     font-style: normal;
     font-size: 40%;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: cubano, sans-serif;
+    font-style: normal;
+    font-size: 40px;
     font-weight: 400;
 }
 
