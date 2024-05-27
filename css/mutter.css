@@ -68,7 +68,7 @@ p {
     border-top-right-radius: 15px;
 }
 
-.infoBoxTitel {
+h3 {
     font-family: cubano, sans-serif;
     text-align: center;
     font-weight: normal;
@@ -99,4 +99,10 @@ h1 {
     font-style: normal;
     font-size: 40%;
     font-weight: 400;
+}
+
+.header-bild {
+    width: 107px;
+    height: 99px;
+    margin: 10px;
 }
