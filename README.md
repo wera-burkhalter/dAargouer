@@ -27,3 +27,11 @@ async function fetchData(url) {
 }
 
 let url = 'https://aareguru.existenz.ch/v2018/cities';
+
+
+
+Kurze Beschreibung des Projkts mit folgenden Themen:
+- Kurzbeschreibung des Projekts (500 Zeichen)
+- Learnings
+- Schweirigkeiten
+- benutzte Ressourcen

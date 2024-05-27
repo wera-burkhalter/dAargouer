@@ -2,11 +2,12 @@ body {
     background-color: rgb(232, 250, 234);
     margin: 0;
     padding: 0;
+
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     margin-left: 5%;
     margin-right: 5%;
-
 }
 
 header {
@@ -110,5 +111,75 @@ h2 {
 .header-bild {
     width: 107px;
     height: 99px;
-    margin: 10px;
+    margin: 10px;
+}
+
+
+/* "Grundaussehen" für den Footer */
+footer {
+    background-color: rgb(70, 92, 72);
+    color: rgb(162, 201, 165);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    margin-top: 50px;
+}
+
+/* Aussehen Inhalt */
+.footer-content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin: 0 auto; 
+    padding: 0 150px; 
+}
+
+/* Aussehen Logo */
+.footer-logo {
+    width: 20vw;
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Aussehen Text */
+.footer-text {
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 10px;
+}
+
+/* Aussehen Links */
+.footer-links {
+    font-family: cubano, sans-serif; 
+    text-align: right;
+}
+.footer-links a {
+    display: block;
+    color: rgb(162, 201, 165);
+    margin: 5px 0;
+    font-size: 4vw;
+}
+
+/* Anpassungen für grosse Bildschirme */
+@media (min-width: 600px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-logo {
+        width: 100px; 
+        margin-bottom: 0; 
+    }
+    .footer-text {
+        font-size: 1.5em; 
+        margin-bottom: 0; 
+    }
+    .footer-links {
+        text-align: right; 
+    }
+    .footer-links a {
+        font-size: 1em; 
+    }
 }

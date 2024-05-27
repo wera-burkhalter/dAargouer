@@ -72,51 +72,7 @@ p{
     font-weight: 400;
 }
 
-/* "Grundaussehen" für den Footer */
-footer {
-    background-color: rgb(70, 92, 72);
-    color: rgb(162, 201, 165);
-    width: 100%;
-    box-sizing: border-box;
-    padding: 20px 10px;
-    margin-top: 50px;
-}
 
-/* Aussehen Inhalt */
-.footer-content {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-}
-
-/* Aussehen Logo */
-.footer-logo {
-    width: 20vw;
-    max-width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-/* Aussehen Text */
-.footer-text {
-    text-align: center;
-    font-size: 4vw;
-    margin-bottom: 10px;
-}
-
-/* Aussehen Links */
-.footer-links {
-    font-family: cubano, sans-serif; 
-    text-align: right;
-}
-.footer-links a {
-    display: block;
-    color: rgb(162, 201, 165);
-    margin: 5px 0;
-    font-size: 4vw;
-}
 
 /* Anpassungen für grosse Bildschirme */
 @media (min-width: 600px) {

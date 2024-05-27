@@ -1,5 +1,9 @@
 body {
     /* background-color: rgb(206, 231, 248); */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 main {
@@ -93,3 +97,31 @@ justify-content: space-around;
 /* .infoBox {
     position: relative;
 } */
+
+
+#schweizerKarte{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  /* Container für das Boot */
+  #container {
+    position: relative;
+    width: 800px; 
+    height: 554.51px;
+  }
+  
+  #boat {
+    width: 10%; 
+    position: absolute; /* Positionierung auf der Seite */
+    left: 390px; /* Startposition horizontal */
+    top: 290px; /* Startposition vertikal */
+    transform: rotate(10deg); /* Startrotation */
+  }
+  
+  
+  .mapPunkt {
+    cursor: pointer;
+  }
