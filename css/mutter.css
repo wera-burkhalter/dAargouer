@@ -97,16 +97,10 @@ dd {
 h1 {
     font-family: cubano, sans-serif;
     font-style: normal;
-    font-size: 40%;
-    font-weight: 400;
-}
-
-h2 {
-    font-family: cubano, sans-serif;
-    font-style: normal;
     font-size: 40px;
     font-weight: 400;
 }
+
 
 .header-bild {
     width: 107px;
