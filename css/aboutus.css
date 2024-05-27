@@ -1,14 +1,26 @@
-body{
+body {
     width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    max-width: 1000px;
+    width: 80vw;
+}
+
 #teammembers {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80vw;
+    align-self: center;
 }
 
 .member {
@@ -16,57 +28,97 @@ body{
     flex-direction: row;
     align-self: center;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 
 .memberReverse {
     display: flex;
     flex-direction: row-reverse;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    align-self: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    object-fit: cover;
 }
 
 .memberImage {
     border-radius: 50%;
     border: 2px solid black;
     height: 20vw;
-    margin-right: 20px;
+    max-height: 300px;
+    min-height: 180px;
+    margin-left: 20px;
     aspect-ratio: 1/1;
-
 }
 
 .memberImageReverse {
     border-radius: 50%;
     border: 2px solid black;
     height: 20vw;
+    max-height: 300px;
+    min-height: 180px;
     margin-right: 20px;
     aspect-ratio: 1/1;
 }
 
 .memberText {
-    align-items: left  ;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    text-align: right;
+    max-width: 500px;
 }
 
 .memberTextReverse {
-    align-items: right;
-
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width: 500px;
 }
 
 
-.memberDescription {
-    font-family: europa, sans-serif;
+
+
+h2 {
+    font-family: cubano, sans-serif;
     font-style: normal;
-    font-size: 12pt;
+    font-size: 28px;
     font-weight: 400;
 }
 
-.memberDescriptionReverse {
-    font-family: europa, sans-serif;
-    font-style: normal;
-    font-size: 12pt;
-    font-weight: 400;
-}
+@media (max-width: 600px) {
+    .member {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
 
-h3{
-text-align: start;
-    
+    .memberReverse {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+p {
+   text-align: center;}
+
+   h1 {
+    text-align: center;}
+
+    h2 {
+        text-align: center;}
+
+
+        .memberImage {
+
+            height: 80vw;
+        }
+        
+        .memberImageReverse {
+
+            height: 80vw;
+
+        }
+
 }
