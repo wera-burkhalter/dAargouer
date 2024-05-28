@@ -53,6 +53,7 @@ main {
     max-height: 300px;
     min-height: 180px;
     margin-left: 20px;
+  object-fit: cover;
     aspect-ratio: 1/1;
 }
 
@@ -63,6 +64,7 @@ main {
     max-height: 300px;
     min-height: 180px;
     margin-right: 20px;
+    object-fit: cover;
     aspect-ratio: 1/1;
 }
 
