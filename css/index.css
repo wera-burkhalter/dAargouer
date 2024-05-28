@@ -1,5 +1,5 @@
 body {
-    /* background-color: rgb(206, 231, 248); */
+    background-color: rgb(206, 231, 248);
     width: 100%;
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 2fr 4fr 1fr;
+    grid-template-columns: 5% repeat(10, 1fr) 5%;
     width: 100%;
 }
 
@@ -16,59 +16,47 @@ section {
     height: 80vh;
 }
 
-#infoBoxCt {
-    display: flex;
-    width: 1fr;
-    background-color: lightsalmon;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 2;
-}
-
-
+/* Thermometer */
 #thermometerCt {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
     display: flex;
     flex-direction: column;
-    width: 100px;
-    height: 90vh;;
-    justify-content: center;
-    align-items: center;
+    width: 5vw;
+    height: 90vh;
+    align-self: center;
+    margin-top: 6vw;
 }
-
-
 .thermometer {
     display: flex;
     flex-direction: column;
     height: 70vh;
-    width: 120px;
+    width: 6vw;
     background-color: white;
     justify-content: center;
     align-items: center;
     border-color: black;
     border-style: solid;
-    border-width: 5px;
-    border-radius: 30px;
+    border-width: 0.2vw;
+    border-radius: 1.7vw;
 }
 #thermometerFillSkala {
     width: 90%;
     height: 90%;
-display: flex;
-flex-direction: row;
-margin: 50px;
-justify-content: space-around;
-
+    display: flex;
+    flex-direction: row;
+    margin: 2.5vw;
+    justify-content: space-around;
 }
 #thermometerSkala {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    width: 20px;
-    border-radius: 20px;   
-    font-size: 20px;
+    width: 1vw;
+    border-radius: 1vw;   
+    font-size: 1.1vw;
 }
-
 #thermometerFill {
     width: 33%;
     height: 3vh;
@@ -76,52 +64,236 @@ justify-content: space-around;
     align-self: flex-end;
     background-color: blue;
 }
-
 #thermoAnzeige {
     display: flex;
     align-self: flex-start;
     justify-content: center;
-
 }
-
 .thermometerZahlCss {
     font-weight: bold;
     margin-bottom: 2vh;
-    font-size: 2em;
+    font-size: 1.7vw;
     display: flex;
     flex-direction: row;
 }
 
 
 
-/* .infoBox {
+
+/* Schweizer Karte mit Boot */
+#container {
     position: relative;
-} */
-
-
+    grid-column: 4 / span 5;
+    grid-row: 4 / span 1;
+    margin-top: 6vw;
+    width: 800px; 
+    height: 664px;
+}
 #schweizerKarte{
     display: block;
     width: 100%;
     height: auto;
-  }
+}
+.mapPunkt {
+    cursor: pointer;
+}
   
-  
-  /* Container für das Boot */
-  #container {
-    position: relative;
-    width: 800px; 
-    height: 554.51px;
-  }
-  
-  #boat {
-    width: 10%; 
+#boat {
+    width: 5vw; 
     position: absolute; /* Positionierung auf der Seite */
-    left: 390px; /* Startposition horizontal */
+    left: 380px; /* Startposition horizontal */
     top: 290px; /* Startposition vertikal */
     transform: rotate(10deg); /* Startrotation */
-  }
+}
+
+/* InfoBox */ 
+#aare-app {
+    grid-column: 9 / span 3;
+    grid-row: 4 / span 1;
+    margin-top: 12vw;
+    
+}
+.infoBox {
+    background-color: #4faff7;
+    border-color: #174466;
+}
+.infoBoxTitel {
+    color: #174466;
+}
+.infoBoxTabelle {
+    color: #174466;
+}
   
-  
-  .mapPunkt {
+
+
+#aareschwumm {
+    grid-column: 2/ span 10;
+    grid-row: 1 / span 1;
+    font-family: cubano, sans-serif;
+    font-style: normal;
+    color: #174466;
+    font-size: 10vw;
+    text-align: center;
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+}
+#abBoot {
+    grid-column: 6 / span 2;
+    grid-row: 2 / span 1;
+    align-self: end;
+    justify-self: center;
+    margin-top: 3vw;
+    position: relative;
     cursor: pointer;
-  }
+    display: inline-block;
+}
+#abBootBild{
+    width: 7vw;
+}
+#abBootBildHover{
+    width: 7vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+#abBoot:hover #abBootBildHover {
+    opacity: 1;
+}
+.animate {
+    offset-path: path('M-0.216064 3C-201.016 87 -288.716 181.5 -315.216 242.5C-341.716 303.5 -64.216 621.5 -64.216 621.5');
+    animation: moveAlongPath 6s linear forwards;
+}
+
+@keyframes moveAlongPath {
+    from {
+        offset-distance: 0%;
+        transform: rotate(-190deg);
+    }
+    to {
+        offset-distance: 100%;
+        transform: rotate(-190deg); /* Boot endet mit einer Rotation von 75° */
+    }
+}
+
+.buttonUnterseite {
+    grid-column: 9 / span 3;
+    grid-row: 4 / span 1;
+    align-self: start;
+    margin-left: 10.5vw;
+    margin-top: 6vw;
+}
+#buttonListe  {
+    width: 5vw;
+}
+#buttonTeam {
+    width: 5vw;
+}
+
+
+
+
+/* Tablets in Landscape */
+@media screen and (max-width: 1024px) {
+    #thermometerCt {
+        width: 8vw;  /* Größerer relativer Wert, angepasst für Tablet-Größe */
+        height: 60vh;  /* Etwas weniger Höhe, um auf dem Bildschirm zu passen */
+        margin-top: 5vw;
+    }
+    #thermometerSkala {
+        font-size: 1.2vw;  /* Kleinere Schriftgröße */
+    }
+    .thermometerZahlCss {
+        font-size: 1.5vw;  /* Kleinere Schriftgröße */
+    }
+    
+    #container {
+        grid-column: 4 / span 5;
+        width: 560px; 
+        height: 388.157px; 
+        margin-top: 13vw;
+    }
+
+    #boat {
+        left: 270px; /* 390px * 60% */
+        top: 202px; /* 290px * 60% */
+    }
+
+    #abBoot {
+        align-self: end;
+        margin-left: -0.5vw;
+        margin-top: 3vw;
+    }
+    #abBootBild{
+        width: 10vw;
+    }
+    #abBootBildHover{
+        width: 10vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    #aare-app {
+        grid-column: 8 / span 4;  /* Mehr Span für breitere Ansicht */
+        align-self: end;
+        z-index: 2;
+    }
+
+    .buttonUnterseite {
+        grid-column: 8 / span 4;
+        grid-row: 4 / span 1;
+        justify-self: end;
+        margin-top: 2vw;
+    }
+    #buttonListe  {
+        width: 7vw;
+    }
+    #buttonTeam {
+        width: 7vw;
+    }
+
+    .animate {
+        offset-path: path('M259.502 6.18267C63.9339 -37.2819 -18.8399 182.597 4.6042 218.099');
+    }
+}
+
+/* Handys */
+@media screen and (max-width: 600px) {
+    #thermometerCt {
+        height: 40vh;  /* Etwas weniger Höhe, um auf dem Bildschirm zu passen */
+        margin-top: 5vw;
+    }
+    .thermometer {
+        width: 9vw;  /* Angepasste Breite */
+    }
+    #thermometerSkala {
+        font-size: 2vw;  /* Kleinere Schriftgröße */
+        margin-right: 1vw;
+    }
+    .thermometerZahlCss {
+        font-size: 2.5vw;  /* Kleinere Schriftgröße */
+    }
+    
+    #container {
+        grid-column: 4 / span 6;
+        width: 120%
+    }
+
+    #boat {
+        left: 185px; /* 390px * 60% */
+        top: 145px; /* 290px * 60% */
+    }
+
+    #aare-app {
+        grid-column: 8 / span 3 ;  /* Mehr Span für breitere Ansicht */
+        z-index: 2;
+    }
+
+    .animate {
+        offset-path: path('M259.502 6.18267C63.9339 -37.2819 -18.8399 182.597 4.6042 218.099');
+    }
+}
