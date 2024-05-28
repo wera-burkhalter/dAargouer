@@ -40,10 +40,10 @@ anfragen("https://aareguru.existenz.ch/v2018/current?city=").then(results => {
         <h3 class="infoBoxTitel">${location}</h3>
         <dl class="infoBoxTabelle">
         
-            <dt>Wasser in °C</dt>
-            <dd>${temperature}</dd>
-            <dt>Luft in °C</dt>
-            <dd>${tt}</dd>
+            <dt>Wasser</dt>
+            <dd>${temperature}°C</dd>
+            <dt>Luft</dt>
+            <dd>${tt}°C</dd>
             <dt>Bade?</dt>
             <dd>${temperature_text}</dd>
             </dl>

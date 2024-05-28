@@ -180,9 +180,12 @@ function updateTemperature(city) {
         thermometerFill.style.height = `${thermoLiquid}%`;
         // thermometerFill.style.backgroundColor = "red";
         if (temperature < 10) {
-            thermometerFill.style.backgroundColor = "blue"
-        } else if (temperature < 15) {
             thermometerFill.style.backgroundColor = "lightblue"
+        } else if (temperature < 15) {
+            thermometerFill.style.backgroundColor = "blue"
+        }
+        else if (temperature < 20) {    
+            thermometerFill.style.backgroundColor = "lightgreen"
         }
         else if (temperature < 25) {
             thermometerFill.style.backgroundColor = "green"
