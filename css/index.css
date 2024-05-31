@@ -7,19 +7,91 @@ body {
 }
 
 main {
-    display: grid;
-    grid-template-columns: 5% repeat(10, 1fr) 5%;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-section {
-    height: 80vh;
+/* LANDING PAGE */
+#aareschwummContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#aareschwumm {
+    font-family: cubano, sans-serif;
+    font-style: normal;
+    color: #174466;
+    font-size: 10vw;
+    text-align: center;
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+}
+#abBoot {
+    margin-top: 3vw;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+#abBootBild{
+    width: 7vw;
+}
+#abBootBildHover{
+    width: 7vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+#abBoot:hover #abBootBildHover {
+    opacity: 1;
+}
+.animate {
+    offset-path: path('M0 0C-201.016 87 -288.716 181.5 -315.216 242.5C-341.716 303.5 -341.716 600 200 900');
+    animation: moveAlongPath 6s linear forwards;
 }
 
-/* Thermometer */
+@keyframes moveAlongPath {
+    from {
+        offset-distance: 10%;
+        transform: rotate(-190deg); 
+    }
+    to {
+        offset-distance: 100%;
+        transform: rotate(-190deg); 
+    }
+}
+
+
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2vw;
+    margin-right: 5vw;
+    margin-top: 10vw;
+}
+#liste  {
+    width: 5vw;
+}
+#team {
+    width: 5vw;
+}
+
+
+/* KARTE UND THEMOMETER */
+#flexContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5vw;
+    margin-left: 3vw;
+}
+
+/* THERMOMETER STYLING */
 #thermometerCt {
-    grid-column: 2 / span 1;
-    grid-row: 4 / span 1;
     display: flex;
     flex-direction: column;
     width: 5vw;
@@ -77,19 +149,15 @@ section {
     flex-direction: row;
 }
 
-
-
-
-/* Schweizer Karte mit Boot */
-#container {
+/* SCHWEIZER KARTE MIT BOOT */
+#containerSchweizerkarte {
     position: relative;
-    grid-column: 4 / span 5;
-    grid-row: 4 / span 1;
     margin-top: 6vw;
-    width: 800px; 
-    height: 664px;
+    width: 100%; 
+    max-width: 1000px;
+    height: auto;
 }
-#schweizerKarte{
+#schweizerKarte {
     display: block;
     width: 100%;
     height: auto;
@@ -97,214 +165,175 @@ section {
 .mapPunkt {
     cursor: pointer;
 }
-  
+
 #boat {
     width: 5vw; 
-    position: absolute; /* Positionierung auf der Seite */
-    left: 380px; /* Startposition horizontal */
-    top: 290px; /* Startposition vertikal */
-    transform: rotate(10deg); /* Startrotation */
+    position: absolute;
+    transform: rotate(10deg);
 }
 
 /* InfoBox */ 
 #aare-app {
-    grid-column: 9 / span 3;
-    grid-row: 4 / span 1;
-    margin-top: 12vw;
-    
+    position: relative;
+    margin-top: 11vw;
 }
 .infoBox {
     background-color: #4faff7;
     border-color: #174466;
-}
-.infoBoxTitel {
-    color: #174466;
-}
-.infoBoxTabelle {
-    color: #174466;
-}
-  
-
-
-#aareschwumm {
-    grid-column: 2/ span 10;
-    grid-row: 1 / span 1;
-    font-family: cubano, sans-serif;
-    font-style: normal;
-    color: #174466;
-    font-size: 10vw;
-    text-align: center;
-    margin-top: 0vw;
-    margin-bottom: 0vw;
-}
-#abBoot {
-    grid-column: 6 / span 2;
-    grid-row: 2 / span 1;
-    align-self: end;
-    justify-self: center;
-    margin-top: 3vw;
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
-}
-#abBootBild{
-    width: 7vw;
-}
-#abBootBildHover{
-    width: 7vw;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    max-width: 30vw;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    z-index: 10;
+    overflow: hidden; /* Ensure content stays within the box */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    word-wrap: break-word; /* Ensure long words break and wrap to the next line */
 }
-#abBoot:hover #abBootBildHover {
-    opacity: 1;
+.infoBoxTitel {
+    color: #174466;
+    font-size: 2vw;
+    margin: 0; /* Reset margin for proper spacing */
 }
-.animate {
-    offset-path: path('M-0.216064 3C-201.016 87 -288.716 181.5 -315.216 242.5C-341.716 303.5 -64.216 621.5 -64.216 621.5');
-    animation: moveAlongPath 6s linear forwards;
+.infoBoxTabelle {
+    color: #174466;
+    font-size: 1vw;
+    margin: 0; /* Reset margin for proper spacing */
+    overflow-wrap: break-word; /* Ensure long text breaks and wraps to the next line */
 }
-
-@keyframes moveAlongPath {
-    from {
-        offset-distance: 0%;
-        transform: rotate(-190deg);
-    }
-    to {
-        offset-distance: 100%;
-        transform: rotate(-190deg); /* Boot endet mit einer Rotation von 75° */
-    }
-}
-
-.buttonUnterseite {
-    grid-column: 9 / span 3;
-    grid-row: 4 / span 1;
-    align-self: start;
-    margin-left: 10.5vw;
-    margin-top: 6vw;
-}
-#buttonListe  {
-    width: 5vw;
-}
-#buttonTeam {
-    width: 5vw;
+/* Schließen-Button */
+.close-btn {
+    background-color: #174466;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1vw;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
 }
 
-/*FOOTER*/
-/*Footer Aenderungen fuer diese Unterseite*/
-footer {
-    background-color: rgb(23, 68, 102);
-    color: rgb(176, 214, 239);
-}
-.footer-text a {
-    color: rgb(176, 214, 239); 
-}
-.footer-links a {
-    color: rgb(176, 214, 239);
+.close-btn:hover {
+    background-color: #092a3f;
 }
 
 
-/* Tablets in Landscape */
-@media screen and (max-width: 1024px) {
-    #thermometerCt {
-        width: 8vw;  /* Größerer relativer Wert, angepasst für Tablet-Größe */
-        height: 60vh;  /* Etwas weniger Höhe, um auf dem Bildschirm zu passen */
-        margin-top: 5vw;
+/* RESPONSIVE FÜR TABLET */
+@media screen and (min-width: 540px) and (max-width: 1024px) {
+    .infoBox {
+        padding: 8px;
+        max-width: 50vw;
     }
-    #thermometerSkala {
-        font-size: 1.2vw;  /* Kleinere Schriftgröße */
+    .infoBoxTitel {
+        font-size: 2vw;
     }
-    .thermometerZahlCss {
-        font-size: 1.5vw;  /* Kleinere Schriftgröße */
-    }
-    
-    #container {
-        grid-column: 4 / span 5;
-        width: 560px; 
-        height: 388.157px; 
-        margin-top: 13vw;
+    .infoBoxTabelle {
+        font-size: 1.5vw;
     }
 
-    #boat {
-        left: 270px; /* 390px * 60% */
-        top: 202px; /* 290px * 60% */
-    }
-
-    #abBoot {
-        align-self: end;
-        margin-left: -0.5vw;
-        margin-top: 3vw;
-    }
     #abBootBild{
-        width: 10vw;
+        width: 13vw;
     }
     #abBootBildHover{
+        width: 13vw;
+    }
+    #containerSchweizerkarte {
+        width: 75vw;
+        height: auto;
+        margin-right: 5vw;
+        margin-top: 15vw;
+    }
+
+    #thermometerCt {
         width: 10vw;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+        height: 60vh;
+        margin-top: 4vw;
     }
-
-    #aare-app {
-        grid-column: 8 / span 4;  /* Mehr Span für breitere Ansicht */
-        align-self: end;
-        z-index: 2;
+    .thermometer {
+        height: 50vh;
+        width: 8vw;
     }
-
-    .buttonUnterseite {
-        grid-column: 8 / span 4;
-        grid-row: 4 / span 1;
-        justify-self: end;
-        margin-top: 2vw;
+    #thermometerFillSkala {
+        margin: 2vw;
     }
-    #buttonListe  {
-        width: 7vw;
+    #thermometerSkala {
+        font-size: 1.5vw;
     }
-    #buttonTeam {
-        width: 7vw;
+    .thermometerZahlCss {
+        font-size: 2vw;
     }
 
     .animate {
-        offset-path: path('M259.502 6.18267C63.9339 -37.2819 -18.8399 182.597 4.6042 218.099');
+        offset-path: path('M0 0C-50 50 -150 100 -170 130C-190 160 -200 300 200 550');
+    }
+
+    #liste  {
+        width: 8vw;
+    }
+    #team {
+        width: 8vw;
     }
 }
 
-/* Handys */
-@media screen and (max-width: 600px) {
+/* RESPONSIVE FÜR SMARTPHONE */
+@media screen and (max-width: 539px) {
+    .infoBox {
+        padding: 6px;
+        max-width: 70vw;
+    }
+    .infoBoxTitel {
+        font-size: 4vw;
+    }
+    .infoBoxTabelle {
+        font-size: 3vw;
+    }
+
+    #abBootBild{
+        width: 15vw;
+    }
+    #abBootBildHover{
+        width: 15vw;
+    }
+
+    #containerSchweizerkarte {
+        width: 90vw;
+        height: auto;
+        margin-right: 5vw;
+        margin-top: 15vw;
+    }
+
     #thermometerCt {
-        height: 40vh;  /* Etwas weniger Höhe, um auf dem Bildschirm zu passen */
-        margin-top: 5vw;
+        width: 15vw;
+        height: 50vh;
+        margin-top: 3vw;
     }
     .thermometer {
-        width: 9vw;  /* Angepasste Breite */
+        height: 40vh;
+        width: 12vw;
+    }
+    #thermometerFillSkala {
+        margin: 1.5vw;
     }
     #thermometerSkala {
-        font-size: 2vw;  /* Kleinere Schriftgröße */
-        margin-right: 1vw;
+        font-size: 2vw;
     }
     .thermometerZahlCss {
-        font-size: 2.5vw;  /* Kleinere Schriftgröße */
-    }
-    
-    #container {
-        grid-column: 4 / span 6;
-        width: 120%
-    }
-
-    #boat {
-        left: 185px; /* 390px * 60% */
-        top: 145px; /* 290px * 60% */
-    }
-
-    #aare-app {
-        grid-column: 8 / span 3 ;  /* Mehr Span für breitere Ansicht */
-        z-index: 2;
+        font-size: 2.5vw;
     }
 
     .animate {
-        offset-path: path('M259.502 6.18267C63.9339 -37.2819 -18.8399 182.597 4.6042 218.099');
+        offset-path: path('M0 0C-25 25 -75 50 -85 65C-95 80 -95 200 35 320');
+    }
+
+    #liste  {
+        width: 10vw;
+    }
+    #team {
+        width: 10vw;
     }
 }
