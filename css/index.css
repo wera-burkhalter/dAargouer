@@ -192,6 +192,17 @@ section {
 }
 
 
+/*Footer Aenderungen fuer diese Unterseite*/
+footer {
+    background-color: rgb(23, 68, 102);
+    color: rgb(176, 214, 239);
+}
+.footer-text a {
+    color: rgb(176, 214, 239); 
+}
+.footer-links a {
+    color: rgb(176, 214, 239);
+}
 
 
 /* Tablets in Landscape */

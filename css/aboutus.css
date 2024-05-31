@@ -93,17 +93,23 @@ h2 {
     font-weight: 400;
 }
 
-/* "Grundaussehen" für den Footer */
+/* Aenderungen Footer fuer diese Unterseite */
 footer {
     background-color: rgb(91, 71, 153);
     color: rgb(192, 183, 220);
-    width: 100%;
-    box-sizing: border-box;
-    padding: 2vw 1vw;
-    margin-top: 5vw;
+}
+
+.footer-text a {
+    color: rgb(192, 183, 220); 
+}
+
+.footer-links a {
+    display: block;
+    color: rgb(192, 183, 220);
 }
 
 
+/*Responsive*/
 @media (max-width: 600px) {
     .member {
         flex-direction: column-reverse;
