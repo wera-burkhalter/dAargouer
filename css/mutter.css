@@ -10,6 +10,20 @@ body {
     margin-right: 5%;
 }
 
+h1 {
+    font-family: cubano, sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 20px;
+    font-family: europe, sans-serif;
+    margin: 0;
+}
+
+
 /* HEADER */
 header {
     display: flex;
@@ -39,11 +53,7 @@ main {
     text-decoration: underline;
 }
 
-p {
-    font-size: 20px;
-    font-family: europe, sans-serif;
-    margin: 0;
-}
+
 
 /* infobox */
 .infoBox {
@@ -70,18 +80,14 @@ p {
     border-top-right-radius: 15px;
 }
 
-h3 {
-    font-family: cubano, sans-serif;
-    text-align: center;
-    font-weight: normal;
-    color: rgb(40, 51, 41);
-}
+
 
 .infoBoxTabelle {
     font-family: europe, sans-serif;
     color: rgb(70, 92, 72);
     display: grid;
     height: 50%;
+    width: 80%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
@@ -95,13 +101,14 @@ dd {
     text-align: right;
 }
 
-
-h1 {
+h3 {
     font-family: cubano, sans-serif;
-    font-style: normal;
-    font-size: 40px;
-    font-weight: 400;
+    text-align: center;
+    font-weight: normal;
+    color: rgb(40, 51, 41);
 }
+
+
 
 
 
@@ -119,11 +126,11 @@ footer {
 
 /* Aussehen Inhalt */
 .footer-content {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    margin: 0 auto; 
-    padding: 0 15vw; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 15vw;
 }
 
 /* Aussehen Logo */
@@ -143,12 +150,12 @@ footer {
 
 /* Aussehen Link im Text*/
 .footer-text a {
-    color: rgb(162, 201, 165); 
+    color: rgb(162, 201, 165);
 }
 
 /* Platzierung Links */
 .footer-links {
-    font-family: cubano, sans-serif; 
+    font-family: cubano, sans-serif;
     text-align: center;
     width: 100%
 }
@@ -170,24 +177,29 @@ footer {
         justify-content: space-between;
         align-items: center;
     }
+
     .footer-logo {
-        width: 100px; 
-        margin-bottom: 0; 
+        width: 100px;
+        margin-bottom: 0;
     }
+
     .footer-text {
-        font-size: 1.5vw; 
-        margin-bottom: 0; 
+        font-size: 1.5vw;
+        margin-bottom: 0;
     }
+
     .footer-links {
         text-align: right;
-        width: auto; 
+        width: auto;
     }
+
     .footer-links a {
-        font-size: 1vw; 
+        font-size: 1vw;
     }
 }
+
 /*Anpassungen für kleine Bildschirme*/
-@media (max-width: 600px){
+@media (max-width: 600px) {
 
     .footer-links {
         text-align: center;
