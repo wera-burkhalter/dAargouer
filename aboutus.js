@@ -16,7 +16,7 @@ const Nicole = {
 
 const Wera = {
     name: "Wera",
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
+    description: "Us Respekt vorem starche Zug vor Aare und auem wo dert unge so umeschwümmt, haute ig mi lieber im Böötli uf. Drum Isches mir es grosses Alige gsi, das die beide Böötli ufer map-site funktioniere und i ha aues derfür gä, ou weni mängisch fasch bi düredräit. Ou s’Design sött natürlich so responsive wie müglech si, mit dene Böötli und au dem fancy züg isch das ufer map site gar nid so eifach gsi, aber win bi gibi nid eifach uf und has so gut wie müglech chöne löse.",
 
     Image: "images/Team/wera.jpg",
 };
