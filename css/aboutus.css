@@ -84,8 +84,6 @@ main {
 }
 
 
-
-
 h2 {
     font-family: cubano, sans-serif;
     font-style: normal;
@@ -93,16 +91,15 @@ h2 {
     font-weight: 400;
 }
 
+/*FOOTER*/
 /* Aenderungen Footer fuer diese Unterseite */
 footer {
     background-color: rgb(91, 71, 153);
     color: rgb(192, 183, 220);
 }
-
 .footer-text a {
     color: rgb(192, 183, 220); 
 }
-
 .footer-links a {
     display: block;
     color: rgb(192, 183, 220);

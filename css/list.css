@@ -71,37 +71,3 @@ p{
     font-size: 20%;
     font-weight: 400;
 }
-
-
-
-/* Anpassungen für grosse Bildschirme */
-/* @media (min-width: 600px) {
-    .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .footer-logo {
-        width: 100px; 
-        margin-bottom: 0; 
-    }
-    .footer-text {
-        font-size: 1.5vw; 
-        margin-bottom: 0; 
-    }
-    .footer-links {
-        text-align: right; 
-    }
-    .footer-links a {
-        font-size: 1vw; 
-    }
-} */
-
-/*Anpassungen für kleine Bildschirme*/
-/* @media (max-width: 600px){
-    input {
-        width: 60%;
-        font-size: 4vw;
-    }
-
-} */

@@ -10,6 +10,7 @@ body {
     margin-right: 5%;
 }
 
+/* HEADER */
 header {
     display: flex;
     flex-direction: row;
@@ -21,6 +22,7 @@ header {
     height: 99px;
     margin: 10px;
 }
+
 
 main {
     align-self: center;
@@ -102,19 +104,9 @@ h1 {
 }
 
 
-.header-bild {
-    width: 107px;
-    height: 99px;
-    margin: 10px;
-}
-/*
-.header-bild {
-    width: 8.00vw;
-    height: 7.40vw;
-    margin: 0.75vw;
-}*/
 
 
+/*FOOTER*/
 /* "Grundaussehen" für den Footer */
 footer {
     background-color: rgb(70, 92, 72);
@@ -154,12 +146,14 @@ footer {
     color: rgb(162, 201, 165); 
 }
 
-/* Aussehen Links */
+/* Platzierung Links */
 .footer-links {
     font-family: cubano, sans-serif; 
     text-align: center;
     width: 100%
 }
+
+/* Aussehen Links */
 .footer-links a {
     display: block;
     color: rgb(162, 201, 165);
@@ -167,6 +161,8 @@ footer {
     font-size: 4vw;
 }
 
+
+/*RESPONSIVE*/
 /* Anpassungen für grosse Bildschirme */
 @media (min-width: 600px) {
     .footer-content {
