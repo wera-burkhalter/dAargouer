@@ -18,6 +18,7 @@ main {
     justify-content: space-between;
     align-items: center;
 }
+
 #aareschwumm {
     font-family: cubano, sans-serif;
     font-style: normal;
@@ -27,16 +28,19 @@ main {
     margin-top: 0vw;
     margin-bottom: 0vw;
 }
+
 #abBoot {
     margin-top: 3vw;
     position: relative;
     cursor: pointer;
     display: inline-block;
 }
-#abBootBild{
+
+#abBootBild {
     width: 7vw;
 }
-#abBootBildHover{
+
+#abBootBildHover {
     width: 7vw;
     position: absolute;
     top: 0;
@@ -44,9 +48,11 @@ main {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 #abBoot:hover #abBootBildHover {
     opacity: 1;
 }
+
 .animate {
     offset-path: path('M0 0C-201.016 87 -288.716 181.5 -315.216 242.5C-341.716 303.5 -341.716 600 200 900');
     animation: moveAlongPath 6s linear forwards;
@@ -55,11 +61,12 @@ main {
 @keyframes moveAlongPath {
     from {
         offset-distance: 10%;
-        transform: rotate(-190deg); 
+        transform: rotate(-190deg);
     }
+
     to {
         offset-distance: 100%;
-        transform: rotate(-190deg); 
+        transform: rotate(-190deg);
     }
 }
 
@@ -73,9 +80,11 @@ main {
     margin-right: 5vw;
     margin-top: 10vw;
 }
-#liste  {
+
+#liste {
     width: 5vw;
 }
+
 #team {
     width: 5vw;
 }
@@ -95,14 +104,14 @@ main {
     display: flex;
     flex-direction: column;
     width: 5vw;
-    height: 90vh;
     align-self: center;
-    margin-top: 6vw;
 }
+
 .thermometer {
     display: flex;
     flex-direction: column;
     height: 70vh;
+    max-height: 55vw;
     width: 6vw;
     background-color: white;
     justify-content: center;
@@ -112,6 +121,7 @@ main {
     border-width: 0.2vw;
     border-radius: 1.7vw;
 }
+
 #thermometerFillSkala {
     width: 90%;
     height: 90%;
@@ -120,15 +130,17 @@ main {
     margin: 2.5vw;
     justify-content: space-around;
 }
+
 #thermometerSkala {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
     width: 1vw;
-    border-radius: 1vw;   
+    border-radius: 1vw;
     font-size: 1.1vw;
 }
+
 #thermometerFill {
     width: 33%;
     height: 3vh;
@@ -136,11 +148,13 @@ main {
     align-self: flex-end;
     background-color: blue;
 }
+
 #thermoAnzeige {
     display: flex;
     align-self: flex-start;
     justify-content: center;
 }
+
 .thermometerZahlCss {
     font-weight: bold;
     margin-bottom: 2vh;
@@ -149,34 +163,38 @@ main {
     flex-direction: row;
 }
 
+
 /* SCHWEIZER KARTE MIT BOOT */
 #containerSchweizerkarte {
     position: relative;
     margin-top: 6vw;
-    width: 100%; 
-    max-width: 1000px;
+    width: 80vw;
+    /* max-width: 1000px; */
     height: auto;
 }
+
 #schweizerKarte {
     display: block;
     width: 100%;
     height: auto;
 }
+
 .mapPunkt {
     cursor: pointer;
 }
 
 #boat {
-    width: 5vw; 
+    width: 5vw;
     position: absolute;
     transform: rotate(10deg);
 }
 
-/* InfoBox */ 
+/* InfoBox */
 #aare-app {
     position: relative;
-    margin-top: 11vw;
+    margin-top: 0px;
 }
+
 .infoBox {
     background-color: #4faff7;
     border-color: #174466;
@@ -184,25 +202,45 @@ main {
     padding: 10px;
     margin-bottom: 20px;
     max-width: 30vw;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 10;
-    overflow: hidden; /* Ensure content stays within the box */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    word-wrap: break-word; /* Ensure long words break and wrap to the next line */
+    overflow: hidden;
+    /* Ensure content stays within the box */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+    word-wrap: break-word;
+    /* Ensure long words break and wrap to the next line */
 }
+
 .infoBoxTitel {
     color: #174466;
     font-size: 2vw;
-    margin: 0; /* Reset margin for proper spacing */
+    margin: 0;
+    /* Reset margin for proper spacing */
 }
+
 .infoBoxTabelle {
     color: #174466;
     font-size: 1vw;
-    margin: 0; /* Reset margin for proper spacing */
-    overflow-wrap: break-word; /* Ensure long text breaks and wraps to the next line */
+    margin: 0;
+    /* Reset margin for proper spacing */
+    overflow-wrap: break-word;
+    /* Ensure long text breaks and wraps to the next line */
 }
+
+#appThermometer {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+right: 15vw;
+margin-top: 15vw;
+align-items: center;
+
+}
+
+
 /* Schließen-Button */
 .close-btn {
     background-color: #174466;
@@ -223,25 +261,30 @@ main {
 }
 
 
+
 /* RESPONSIVE FÜR TABLET */
 @media screen and (min-width: 540px) and (max-width: 1024px) {
     .infoBox {
         padding: 8px;
         max-width: 50vw;
     }
+
     .infoBoxTitel {
         font-size: 2vw;
     }
+
     .infoBoxTabelle {
         font-size: 1.5vw;
     }
 
-    #abBootBild{
+    #abBootBild {
         width: 13vw;
     }
-    #abBootBildHover{
+
+    #abBootBildHover {
         width: 13vw;
     }
+
     #containerSchweizerkarte {
         width: 75vw;
         height: auto;
@@ -252,18 +295,22 @@ main {
     #thermometerCt {
         width: 10vw;
         height: 60vh;
-        margin-top: 4vw;
+        margin-top: 0px;
     }
+
     .thermometer {
         height: 50vh;
         width: 8vw;
     }
+
     #thermometerFillSkala {
         margin: 2vw;
     }
+
     #thermometerSkala {
         font-size: 1.5vw;
     }
+
     .thermometerZahlCss {
         font-size: 2vw;
     }
@@ -272,31 +319,69 @@ main {
         offset-path: path('M0 0C-50 50 -150 100 -170 130C-190 160 -200 300 200 550');
     }
 
-    #liste  {
+    #liste {
         width: 8vw;
     }
+
     #team {
         width: 8vw;
     }
+
+    #flexContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 5vw;
+        margin-left: 3vw;
+    }
+
+    #appThermometer {
+        display: flex;
+        flex-direction: row;
+        right: 15vw;
+        margin-top: 15vw;
+        align-items: center;
+        position: relative;
+    }
+
+    .infoBox {
+        padding: 6px;
+        max-width: 70vw;
+        position: relative;
+    }
+
+    #containerSchweizerkarte {
+        width: 100%;
+        height: auto;
+        margin-right: 5vw;
+        margin-top: 15vw;
+        align-self: flex-start;
+    }
+
 }
+
 
 /* RESPONSIVE FÜR SMARTPHONE */
 @media screen and (max-width: 539px) {
     .infoBox {
         padding: 6px;
         max-width: 70vw;
+        position: relative;
     }
+
     .infoBoxTitel {
         font-size: 4vw;
     }
+
     .infoBoxTabelle {
         font-size: 3vw;
     }
 
-    #abBootBild{
+    #abBootBild {
         width: 15vw;
     }
-    #abBootBildHover{
+
+    #abBootBildHover {
         width: 15vw;
     }
 
@@ -312,16 +397,20 @@ main {
         height: 50vh;
         margin-top: 3vw;
     }
+
     .thermometer {
         height: 40vh;
         width: 12vw;
     }
+
     #thermometerFillSkala {
         margin: 1.5vw;
     }
+
     #thermometerSkala {
         font-size: 2vw;
     }
+
     .thermometerZahlCss {
         font-size: 2.5vw;
     }
@@ -330,9 +419,10 @@ main {
         offset-path: path('M0 0C-25 25 -75 50 -85 65C-95 80 -95 200 35 320');
     }
 
-    #liste  {
+    #liste {
         width: 10vw;
     }
+
     #team {
         width: 10vw;
     }

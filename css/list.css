@@ -1,24 +1,29 @@
-body{
+body {
     background-color: rgb(232, 250, 234);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-main { display: flex;
-flex-direction: column;
-flex-wrap: wrap;}
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
 
-#aare-app { display: flex;
-flex-direction: row;
-flex-wrap:wrap;
-justify-content: center;}
+#aare-app {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-#search-container{
+#search-container {
     display: flex;
     justify-content: center;
-    padding-top: 50px;    /* Abstand oben innerhalb des Containers */
+    padding-top: 50px;
+    /* Abstand oben innerhalb des Containers */
     padding-bottom: 50px;
 }
 
@@ -55,7 +60,7 @@ h1 {
     font-weight: 400;
 }
 
-p{
+p {
     font-family: europa, sans-serif;
     font-style: normal;
     font-size: 20%;
