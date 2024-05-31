@@ -33,5 +33,7 @@ let url = 'https://aareguru.existenz.ch/v2018/cities';
 Kurze Beschreibung des Projkts mit folgenden Themen:
 - Kurzbeschreibung des Projekts (500 Zeichen)
 - Learnings
-- Schweirigkeiten
+- Schwierigkeiten
+Wir hatten zu beginn grosse Schwierigkeiten mit dem Einbinden, respektive schon mit dem Verstehen der API
 - benutzte Ressourcen
+
