@@ -118,7 +118,7 @@ h3 {
 footer {
     background-color: rgb(70, 92, 72);
     color: rgb(162, 201, 165);
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box;
     padding: 2vw 1vw;
     margin-top: 5vw;

@@ -202,6 +202,7 @@ main {
     padding: 10px;
     margin-bottom: 20px;
     max-width: 30vw;
+    max-height: 600px;
     position: relative;
     top: 0;
     left: 0;
@@ -234,9 +235,9 @@ main {
     display: flex;
     flex-direction: row;
     position: absolute;
-right: 15vw;
-margin-top: 15vw;
-align-items: center;
+    right: 15vw;
+    align-items: center;
+    align-self: center;
 
 }
 
@@ -338,10 +339,11 @@ align-items: center;
     #appThermometer {
         display: flex;
         flex-direction: row;
-        right: 15vw;
-        margin-top: 15vw;
+        right: auto;
         align-items: center;
+        justify-content: space-around;
         position: relative;
+        width: 100%;
     }
 
     .infoBox {
@@ -425,5 +427,24 @@ align-items: center;
 
     #team {
         width: 10vw;
+    }
+
+    #flexContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 5vw;
+margin-left: 0px;
+        width: 100%;
+    }
+
+    #appThermometer {
+        display: flex;
+        flex-direction: row;
+        right: auto;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        width: 100%;
     }
 }
