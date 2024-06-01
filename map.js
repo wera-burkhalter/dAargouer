@@ -32,22 +32,21 @@ function updateTemperature(city) {
         let thermoLiquid = temperature * 2.5;
         thermometerFill.style.height = `${thermoLiquid}%`;
         if (temperature < 10) {
-            thermometerFill.style.backgroundColor = "lightblue";
-        } else if (temperature < 15) {
-            thermometerFill.style.backgroundColor = "blue";
+            thermometerFill.style.backgroundImage = "linear-gradient(to top, #3a55a5, #8dd7f2)";
+        }
+        else if (temperature < 15) {    
+            thermometerFill.style.backgroundImage = "linear-gradient(to top, #3a55a5, #8dd7f2, #4db748)";
         }
         else if (temperature < 20) {
-            thermometerFill.style.backgroundColor = "lightgreen";
+            thermometerFill.style.backgroundImage = "linear-gradient(to top, #3a55a5, #8dd7f2, #4db748, #88c544)";
         }
         else if (temperature < 25) {
-            thermometerFill.style.backgroundColor = "green";
-        }
-        else if (temperature < 30) {
-            thermometerFill.style.backgroundColor = "orange";
+            thermometerFill.style.backgroundImage = "linear-gradient(to top, #3a55a5, #8dd7f2, #4db748, #88c544, #dbe138)";
         }
         else {
-            thermometerFill.style.backgroundColor = "red";
+            thermometerFill.style.backgroundImage = "linear-gradient(to top, #3a55a5, #8dd7f2, #4db748, #88c544, #dbe138, #d37728)";
         }
+
     }).catch(error => {
         console.error(`Fehler bei der Anfrage für ${city}:`, error);
     });

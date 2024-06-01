@@ -202,7 +202,7 @@ main {
     padding: 10px;
     margin-bottom: 20px;
     max-width: 30vw;
-    max-height: 600px;
+    max-height: 900px;
     position: relative;
     top: 0;
     left: 0;
@@ -268,10 +268,12 @@ main {
     .infoBox {
         padding: 8px;
         max-width: 50vw;
+        max-height: 600px;
     }
 
     .infoBoxTitel {
         font-size: 2vw;
+        max-height: 600px;
     }
 
     .infoBoxTabelle {
@@ -295,7 +297,6 @@ main {
 
     #thermometerCt {
         width: 10vw;
-        height: 60vh;
         margin-top: 0px;
     }
 
@@ -434,7 +435,7 @@ main {
         flex-direction: column;
         justify-content: space-around;
         gap: 5vw;
-margin-left: 0px;
+        margin-left: 0px;
         width: 100%;
     }
 
