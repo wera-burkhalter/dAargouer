@@ -73,7 +73,7 @@ function infoBox(city) {
         app.innerHTML += `
             <article class="infoBox">
                 <button class="close-btn" onclick="closeInfoBox()">✖</button>
-                <img src="Images/${location}.jpg" alt="${location}" class="infoBoxImg">
+                <img src="Images/Locations/${location}.jpg" alt="${location}" class="infoBoxImg">
                 <h3 class="infoBoxTitel">${location}</h3>
                 <dl class="infoBoxTabelle">
                     <dt>Wasser in °C</dt>
