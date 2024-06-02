@@ -70,7 +70,7 @@ function infoBox(city) {
         let tt = results.weather.current.tt; // aktuelle Lufttemperatur aus den Ergebnissen holen
 
         // Überprüfen Sie die Bild-URL
-        let imageUrl = `Images/${location}.jpg`;
+        let imageUrl = `https://480567-4.web.fhgr.ch/Images/${location}.jpg`;
         console.log(imageUrl);
 
         // InfoBox-Inhalt aktualisieren
