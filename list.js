@@ -36,7 +36,7 @@ anfragen("https://aareguru.existenz.ch/v2018/current?city=").then(results => {
         let temperature_text = result.aare.temperature_text;
         let tt = result.weather.current.tt;
         app.innerHTML += `<article class="infoBox">
-        <img src="Images/${location}.jpg" alt="${location}" class="infoBoxImg">
+        <img src="Images/Locations/${location}.jpg" alt="${location}" class="infoBoxImg">
         <h3 class="infoBoxTitel">${location}</h3>
         <dl class="infoBoxTabelle">
         
@@ -80,7 +80,7 @@ function displayResults(results) {
         let tt = result.weather.current.tt;
 
         app.innerHTML += `<article class="infoBox">
-            <img src="Images/${location}.jpg" alt="${location}" class="infoBoxImg">
+            <img src="Images/Locations/${location}.jpg" alt="${location}" class="infoBoxImg">
             <h3 class="infoBoxTitel">${location}</h3>
             <dl class="infoBoxTabelle">
                 <dt>Wassertemperatur</dt>
