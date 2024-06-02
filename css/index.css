@@ -1,6 +1,13 @@
+/* Grundlegende Einstellungen für Body und HTML */
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 body {
     background-color: rgb(206, 231, 248);
-    width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,16 +16,22 @@ body {
 main {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Zentriert die Elemente, um Überlauf zu verhindern */
+    width: 100%;
+    overflow-x: hidden; /* verhindert horizontalen Überlauf */
 }
 
 /* LANDING PAGE */
+/* Styling für den Container mit Hauptüberschrift und das Bild des Boot */
 #aareschwummContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
+/* Styling für die Hauptüberschrift */
 #aareschwumm {
     font-family: cubano, sans-serif;
     font-style: normal;
@@ -27,8 +40,10 @@ main {
     text-align: center;
     margin-top: 0vw;
     margin-bottom: 0vw;
+    max-width: 100%; /* verhindert das Überlaufen */
 }
 
+/* Styling für das Bild des Boot */
 #abBoot {
     margin-top: 3vw;
     position: relative;
@@ -36,12 +51,12 @@ main {
     display: inline-block;
 }
 
-#abBootBild {
+#abBootBild, #abBootBildHover {
     width: 7vw;
+    max-width: 100%; /* verhindert das Überlaufen */
 }
 
 #abBootBildHover {
-    width: 7vw;
     position: absolute;
     top: 0;
     left: 0;
@@ -49,10 +64,12 @@ main {
     transition: opacity 0.3s ease;
 }
 
+/* Hinzufügen eines Hover-Effekts auf das Bild des Bootes */
 #abBoot:hover #abBootBildHover {
     opacity: 1;
 }
 
+/* Hinzufügen der Animation auf das Bild des Bootes entlang eines Pfades */
 .animate {
     offset-path: path('M0 0C-201.016 87 -288.716 181.5 -315.216 242.5C-341.716 303.5 -341.716 600 200 900');
     animation: moveAlongPath 6s linear forwards;
@@ -70,43 +87,42 @@ main {
     }
 }
 
-
-
+/* MENÜ */
+/* Styling für das Menü mit den Bildern, die als Buttons dienen */
 #menu {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     gap: 2vw;
-    margin-right: 5vw;
     margin-top: 10vw;
 }
 
-#liste {
+#liste, #team {
     width: 5vw;
+    max-width: 100%; /* verhindert das Überlaufen */
 }
 
-#team {
-    width: 5vw;
-}
-
-
-/* KARTE UND THEMOMETER */
+/* KARTE - THEMOMETER - INFOBOX */
+/* Grundlegendes Styling für den Container mi Karte, Thermometer und InfoBox*/
 #flexContainer {
-    display: flex;
+    display: flex; 
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-around; 
     gap: 5vw;
-    margin-left: 3vw;
+    width: 100%; /* Breite von 100% des übergeordneten Containers */
+    overflow-x: hidden; /* verhindert horizontalen Überlauf */
 }
 
-/* THERMOMETER STYLING */
+/* Styling des Thermometers-Containers */
 #thermometerCt {
     display: flex;
     flex-direction: column;
     width: 5vw;
     align-self: center;
+    max-width: 100%; /* verhindert das Überlaufen */
 }
 
+/* generelles Styling des Thermometers */
 .thermometer {
     display: flex;
     flex-direction: column;
@@ -117,11 +133,13 @@ main {
     justify-content: center;
     align-items: center;
     border-color: black;
-    border-style: solid;
+    border-style: solid; /* durchgezogene Linie des Rahmes */
     border-width: 0.2vw;
     border-radius: 1.7vw;
+    max-width: 100%; /* verhindert das Überlaufen */
 }
 
+/* Styling des Containers der ThermometerSkala */
 #thermometerFillSkala {
     width: 90%;
     height: 90%;
@@ -131,6 +149,7 @@ main {
     justify-content: space-around;
 }
 
+/* Styling der ThermometerSkala */
 #thermometerSkala {
     display: flex;
     flex-direction: column;
@@ -141,6 +160,7 @@ main {
     font-size: 1.1vw;
 }
 
+/* Styling des Thermometer-Füllstands */
 #thermometerFill {
     width: 33%;
     height: 3vh;
@@ -149,12 +169,14 @@ main {
     background-color: blue;
 }
 
+/* Styling des Containers für die Thermometer-Anzeige */
 #thermoAnzeige {
     display: flex;
     align-self: flex-start;
     justify-content: center;
 }
 
+/* Styling der Zahlen im Thermometer */
 .thermometerZahlCss {
     font-weight: bold;
     margin-bottom: 2vh;
@@ -163,33 +185,47 @@ main {
     flex-direction: row;
 }
 
-
-/* SCHWEIZER KARTE MIT BOOT */
+/* SCHWEIZER KARTE MIT PUNKTEN UND BOOT */
+/* Grundlegendes Styling für den Container */
 #containerSchweizerkarte {
     position: relative;
     margin-top: 6vw;
     width: 80vw;
-    /* max-width: 1000px; */
     height: auto;
+    max-width: 100%; /* verhindert Überlaufen */
 }
 
+/* Styling der Schweizerkarte */
 #schweizerKarte {
     display: block;
     width: 100%;
     height: auto;
 }
 
+/* Styling der Punkte auf der Karte */
 .mapPunkt {
     cursor: pointer;
 }
 
+/* Styling des Bootes auf der Karte */
 #boat {
     width: 5vw;
     position: absolute;
     transform: rotate(10deg);
 }
 
-/* InfoBox */
+/* THERMOMETER UND INFOBOX */
+/* Styling des Containers für den Thermometer und die InfoBox */
+#appThermometer { 
+    display: flex; 
+    flex-direction: row; 
+    position: absolute;
+    right: 15vw;
+    align-items: center; /* Vertikale Ausrichtung der Elemente */
+    align-self: center; /* Zentrierung des Containers im übergeordneten Flex-Container */
+}
+
+/* Styling der InfoBox */
 #aare-app {
     position: relative;
     margin-top: 0px;
@@ -198,7 +234,7 @@ main {
 .infoBox {
     background-color: #4faff7;
     border-color: #174466;
-    border-radius: 10px;
+    border-radius: 10px; 
     padding: 10px;
     margin-bottom: 20px;
     max-width: 30vw;
@@ -207,104 +243,127 @@ main {
     top: 0;
     left: 0;
     z-index: 10;
-    overflow: hidden;
-    /* Ensure content stays within the box */
+    overflow: hidden; /* Überlaufende Inhalte anschneiden */
     box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
-    word-wrap: break-word;
-    /* Ensure long words break and wrap to the next line */
+    word-wrap: break-word; /*lange Wörter werden umgebrochen, um Überlauf zu verhindern */
 }
 
+/* Styling des Titel und der Tabelle in der InfoBox */
 .infoBoxTitel {
     color: #174466;
     font-size: 2vw;
     margin: 0;
-    /* Reset margin for proper spacing */
 }
 
 .infoBoxTabelle {
     color: #174466;
     font-size: 1vw;
     margin: 0;
-    /* Reset margin for proper spacing */
-    overflow-wrap: break-word;
-    /* Ensure long text breaks and wraps to the next line */
+    overflow-wrap: break-word; /*lange Wörter werden umgebrochen, um Überlauf zu verhindern */
 }
 
-#appThermometer {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    right: 15vw;
-    align-items: center;
-    align-self: center;
-
-}
-
-
-/* Schließen-Button */
+/* Schließen-Button für InfoBox */
 .close-btn {
-    background-color: #174466;
+    background-color: #174466; 
     color: white;
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 1vw;
-    cursor: pointer;
+    cursor: pointer; /* Mauszeiger ändert sich in Zeigefinger bei Hover */
     position: absolute;
     top: 10px;
     right: 10px;
-    z-index: 20;
+    z-index: 2; /* Stellt sicher, dass der Button über dem Inhalt liegt */
 }
-
+/* Hinzufügen eines Hover-Effekt für Schließen-Button */
 .close-btn:hover {
     background-color: #092a3f;
+}
+
+/* FOOTER */
+/* Anpassen der Farben des Footers, damit sie zur Seite passen */
+footer {
+    background-color: #174466;
+    color: rgb(206, 231, 248);
+}
+.footer-text a {
+    color: rgb(206, 231, 248); 
+}
+.footer-links a {
+    display: block;
+    color: rgb(206, 231, 248);
 }
 
 
 
 /* RESPONSIVE FÜR TABLET */
+/* Medienabfrage für Bildschirme mit einer Breite von 540px bis 1024px */
 @media screen and (min-width: 540px) and (max-width: 1024px) {
-    .infoBox {
-        padding: 8px;
-        max-width: 50vw;
-        max-height: 600px;
-    }
-
-    .infoBoxTitel {
-        font-size: 2vw;
-        max-height: 600px;
-    }
-
-    .infoBoxTabelle {
-        font-size: 1.5vw;
-    }
-
-    #abBootBild {
+    /* Grösse des Bootes anpassen */
+    #abBootBild, #abBootBildHover {
         width: 13vw;
+        max-width: 100%; /* Verhindert das Überlaufen */
     }
 
-    #abBootBildHover {
-        width: 13vw;
+    /* Pfad des Bootes verkürzern und so aböndern, damit die Animation auf kleineren Bildschirmen nicht über den Rand hinausgeht */
+    .animate {
+        offset-path: path('M0 0C-50 50 -150 100 -170 130C-190 160 -200 300 200 550');
     }
 
+    /* Flex-Container für die Elemente anpassen */
+    #flexContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 5vw;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        width: 100%; /* Verhindert das Überlaufen */
+    }
+
+    /* Grösse der Menü-Buttons anpassen */
+    #liste, #team {
+        width: 8vw;
+        max-width: 100%; /* Verhindert das Überlaufen */
+    }
+    
+    /* Grösse der Schweizerkarte anpassen */
     #containerSchweizerkarte {
-        width: 75vw;
+        width: 90vw;
         height: auto;
-        margin-right: 5vw;
         margin-top: 15vw;
+        margin-left: 5vw;
+        align-self: flex-start;
+        position: relative; /* relativ für absolute Positionierung des Thermometers */
     }
 
+    /* Thermometer Layout */
+    #appThermometer {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        right: 5vw; /* Positionierung auf der Karte beibehalten */
+        margin-top: 10vw;
+        align-items: center;
+        align-self: center;
+    }
+
+    /* Grösse Thermometer Container anpassen */
     #thermometerCt {
         width: 10vw;
         margin-top: 0px;
+        max-width: 100%; /* Verhindert das Überlaufen */
     }
 
+    /* Grösse des Thermometers anpassen */
     .thermometer {
         height: 50vh;
         width: 8vw;
+        max-width: 100%; /* Verhindert das Überlaufen */
     }
 
+    /* Grösse des Thermometer-Füllstands und Zahlen anpassen */
     #thermometerFillSkala {
         margin: 2vw;
     }
@@ -317,26 +376,66 @@ main {
         font-size: 2vw;
     }
 
+    /* Grösse der InfoBox anpassen */
+    .infoBox {
+        padding: 6px;
+        max-width: 70vw;
+        position: relative;
+        }
+
+    .infoBoxTitel {
+        font-size: 2vw;
+        max-height: 600px;
+    }
+
+    .infoBoxTabelle {
+        font-size: 1.5vw;
+    }
+}
+
+
+/* RESPONSIVE FÜR SMARTPHONE */
+/* Medienabfrage für Bildschirme mit einer Breite von 0px bis 539px */
+@media screen and (max-width: 539px) {
+    /* Grösse des Bootes anpassen */
+    #abBootBild, #abBootBildHover {
+        width: 15vw;
+        max-width: 100%; /* Verhindert das Überlaufen */
+    }
+
+    /* Pfad des Bootes verkürzern und so aböndern, damit die Animation auf kleineren Bildschirmen nicht über den Rand hinausgeht */
     .animate {
-        offset-path: path('M0 0C-50 50 -150 100 -170 130C-190 160 -200 300 200 550');
+        offset-path: path('M0 0C-25 25 -75 50 -85 65C-95 80 -95 200 35 320');
     }
 
-    #liste {
-        width: 8vw;
-    }
-
-    #team {
-        width: 8vw;
-    }
-
+    /* Flex-Container für die Elemente anpassen */
     #flexContainer {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         gap: 5vw;
-        margin-left: 3vw;
+        margin-left: 7vw;
+        margin-right: 3vw;
+        width: 100%; /* Verhindert das Überlaufen */
     }
 
+    /* Grösse der Menü-Buttons anpassen */
+    #liste, #team {
+        width: 10vw;
+        max-width: 100%; /* Verhindert das Überlaufen */
+    }
+
+    /* Grösse der Schweizerkarte anpassen */
+    #containerSchweizerkarte {
+        width: 90vw;
+        height: auto;
+        margin-right: 5vw;
+        margin-left: 4vw;
+        margin-top: 10vw;
+        position: relative; /* Ensure this is relative for absolute positioning of the thermometer */
+    }
+
+    /* Thermometer Layout */
     #appThermometer {
         display: flex;
         flex-direction: row;
@@ -347,65 +446,22 @@ main {
         width: 100%;
     }
 
-    .infoBox {
-        padding: 6px;
-        max-width: 70vw;
-        position: relative;
-    }
-
-    #containerSchweizerkarte {
-        width: 100%;
-        height: auto;
-        margin-right: 5vw;
-        margin-top: 15vw;
-        align-self: flex-start;
-    }
-
-}
-
-
-/* RESPONSIVE FÜR SMARTPHONE */
-@media screen and (max-width: 539px) {
-    .infoBox {
-        padding: 6px;
-        max-width: 70vw;
-        position: relative;
-    }
-
-    .infoBoxTitel {
-        font-size: 4vw;
-    }
-
-    .infoBoxTabelle {
-        font-size: 3vw;
-    }
-
-    #abBootBild {
-        width: 15vw;
-    }
-
-    #abBootBildHover {
-        width: 15vw;
-    }
-
-    #containerSchweizerkarte {
-        width: 90vw;
-        height: auto;
-        margin-right: 5vw;
-        margin-top: 15vw;
-    }
-
+    /* Grösse Thermometer Container anpassen */
     #thermometerCt {
         width: 15vw;
         height: 50vh;
         margin-top: 3vw;
+        max-width: 100%; /* Verhindert das Überlaufen */
     }
 
+    /* Grösse des Thermometers anpassen */
     .thermometer {
         height: 40vh;
         width: 12vw;
+        max-width: 100%; /* Verhindert das Überlaufen */
     }
 
+    /* Grösse des Thermometer-Füllstands und Zahlen anpassen */
     #thermometerFillSkala {
         margin: 1.5vw;
     }
@@ -417,35 +473,20 @@ main {
     .thermometerZahlCss {
         font-size: 2.5vw;
     }
-
-    .animate {
-        offset-path: path('M0 0C-25 25 -75 50 -85 65C-95 80 -95 200 35 320');
-    }
-
-    #liste {
-        width: 10vw;
-    }
-
-    #team {
-        width: 10vw;
-    }
-
-    #flexContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        gap: 5vw;
-        margin-left: 0px;
-        width: 100%;
-    }
-
-    #appThermometer {
-        display: flex;
-        flex-direction: row;
-        right: auto;
-        align-items: center;
-        justify-content: space-around;
+    
+    /* Grösse der InfoBox anpassen */
+    .infoBox {
+        padding: 4px;
+        max-width: 60vw;
+        max-height: 50vh;
         position: relative;
-        width: 100%;
+    }
+
+    .infoBoxTitel {
+        font-size: 3vw;
+    }
+
+    .infoBoxTabelle {
+        font-size: 2.5vw;
     }
 }

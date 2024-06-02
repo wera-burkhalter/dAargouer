@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>d'Aargouer | Karte</title>
+    <!--Verlinkung der CSS-Dateien, unseres Logos und der Schriften-->
     <link rel="stylesheet" href="/css/mutter.css">
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/boot.css">
     <link rel="icon" href="/Images/LOGO_daargouer.png">
     <link rel="stylesheet" href="https://use.typekit.net/ewp6mnv.css">
 </head>
@@ -17,6 +17,7 @@
     </header>
     <main>
 
+        <!--Container für Hauptüberschrift und das fahrende Boot-->
         <section id="aareschwummContainer">
             <h1 id="aareschwumm">Isches gnue warm füre Aareschwumm?</h1>
             <div id="abBoot">
@@ -25,6 +26,7 @@
             </div>
         </section>
 
+        <!--Menu-Sektion, mit den Buttons zu den anderen zwei Seiten-->
         <section id="menu">
             <div id="buttonLister">
                 <a href="List.html"><img src="Images/LISTE_Button.png" id="liste"></a>
@@ -34,11 +36,10 @@
             </div>
         </section>
 
+        <!--Flex-Container mit der Schweizerkarte, dem Thermometer und der infoBox-->
         <section id="flexContainer">
 
-
-
-
+            <!--Schweizerkarte mit den markierten Punkten für die verschiedenen Orte-->
             <div id="containerSchweizerkarte">
                 <img src="Images/Schweizer_Karte.png" id="schweizerKarte" alt="Schweizerkarte" usemap="#chmap">
                 <map name="chmap" id="chmap">
@@ -54,9 +55,12 @@
                 </map>
             </div>
 
-            <section id="appThermometer">
 
+            <section id="appThermometer">
+            <!--Info-Box mit den Informationen zu den verschiedenen Orten-->
                 <div id="aare-app"></div>
+
+                <!--Thermometer mit Temperaturanzeige-->
                 <article id="thermometerCt">
                     <div class="thermometer">
                         <div id="thermometerFillSkala">
@@ -86,6 +90,8 @@
         </section>
 
     </main>
+    
+    <!--Footer mit Logo und Links zu weiteren Seiten-->
     <footer>
         <div class="footer-content">
             <img src="Images/LOGO_daargouer.png" class="footer-logo">
@@ -99,6 +105,7 @@
         </div>
     </footer>
 
+    <!--Verlinkung zur JavaScript Datei-->
     <script src="map.js"></script>
 </body>
 
