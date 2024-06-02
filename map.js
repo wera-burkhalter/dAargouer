@@ -64,26 +64,35 @@ function infoBox(city) {
     anfragen(url).then(results => {
         console.log(results.aare.location); // Standort in der Konsole ausgeben
         app.innerHTML = ''; // vorherige InfoBox leeren
-        let location = results.aare.location; //Standort aus den Ergebnissen holen
+        let location = results.aare.location; // Standort aus den Ergebnissen holen
         let temperature = results.aare.temperature; // Temperatur aus den Ergebnissen holen
         let temperature_text = results.aare.temperature_text; // Temperaturtext aus den Ergebnissen holen
         let tt = results.weather.current.tt; // aktuelle Lufttemperatur aus den Ergebnissen holen
 
-        // InfoBox-Inhalt aktualisieren
-        app.innerHTML += `
-            <article class="infoBox">
-                <button class="close-btn" onclick="closeInfoBox()">✖</button>
-                <img src="Images/Locations/${location}.jpg" alt="${location}" class="infoBoxImg">
-                <h3 class="infoBoxTitel">${location}</h3>
-                <dl class="infoBoxTabelle">
-                    <dt>Wasser in °C</dt>
-                    <dd>${temperature}</dd>
-                    <dt>Luft in °C</dt>
-                    <dd>${tt}</dd>
-                    <dt>Bade?</dt>
-                    <dd>${temperature_text}</dd>
-                </dl>
-            </article>`;
+        // Überprüfen, ob das Bild existiert
+        let imgSrc = `Images/Locations/${location}.jpg`;
+        let img = new Image();
+        img.src = imgSrc;
+        img.onerror = function() {
+            imgSrc = 'Images/Locations/default.jpg'; // Platzhalterbild, falls das spezifische Bild nicht gefunden wird
+        };
+        img.onload = function() {
+            // InfoBox-Inhalt aktualisieren
+            app.innerHTML += `
+                <article class="infoBox">
+                    <button class="close-btn" onclick="closeInfoBox()">✖</button>
+                    <img src="${imgSrc}" alt="${location}" class="infoBoxImg">
+                    <h3 class="infoBoxTitel">${location}</h3>
+                    <dl class="infoBoxTabelle">
+                        <dt>Wasser in °C</dt>
+                        <dd>${temperature}</dd>
+                        <dt>Luft in °C</dt>
+                        <dd>${tt}</dd>
+                        <dt>Bade?</dt>
+                        <dd>${temperature_text}</dd>
+                    </dl>
+                </article>`;
+        };
     }).catch(error => {
         console.error('Error fetching data:', error);
     });
