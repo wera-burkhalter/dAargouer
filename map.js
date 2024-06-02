@@ -70,14 +70,13 @@ function infoBox(city) {
         let tt = results.weather.current.tt; // aktuelle Lufttemperatur aus den Ergebnissen holen
 
         // Überprüfen Sie die Bild-URL
-        let imageUrl = `https://480567-4.web.fhgr.ch/Images/${location}.jpg`;
         console.log(imageUrl);
 
         // InfoBox-Inhalt aktualisieren
         app.innerHTML += `
             <article class="infoBox">
                 <button class="close-btn" onclick="closeInfoBox()">✖</button>
-                <img src="${imageUrl}" alt="${location}" class="infoBoxImg">
+                <img src="images/${location}" alt="${location}" class="infoBoxImg">
                 <h3 class="infoBoxTitel">${location}</h3>
                 <dl class="infoBoxTabelle">
                     <dt>Wasser in °C</dt>
