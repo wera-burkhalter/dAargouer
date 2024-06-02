@@ -64,19 +64,17 @@ function infoBox(city) {
     anfragen(url).then(results => {
         console.log(results.aare.location); // Standort in der Konsole ausgeben
         app.innerHTML = ''; // vorherige InfoBox leeren
-        let location = results.aare.location; // Standort aus den Ergebnissen holen
+        let location = results.aare.location; //Standort aus den Ergebnissen holen
         let temperature = results.aare.temperature; // Temperatur aus den Ergebnissen holen
         let temperature_text = results.aare.temperature_text; // Temperaturtext aus den Ergebnissen holen
         let tt = results.weather.current.tt; // aktuelle Lufttemperatur aus den Ergebnissen holen
 
-        // Überprüfen Sie die Bild-URL
-        console.log(imageUrl);
-
         // InfoBox-Inhalt aktualisieren
+        console.log('Images/' + location + '.jpg');
         app.innerHTML += `
             <article class="infoBox">
                 <button class="close-btn" onclick="closeInfoBox()">✖</button>
-                <img src="images/${location}" alt="${location}" class="infoBoxImg">
+                <img src="Images/${location}.jpg" alt="${location}" class="infoBoxImg">
                 <h3 class="infoBoxTitel">${location}</h3>
                 <dl class="infoBoxTabelle">
                     <dt>Wasser in °C</dt>
