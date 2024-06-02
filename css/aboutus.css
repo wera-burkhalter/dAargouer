@@ -1,3 +1,4 @@
+/* Allgemeine Styles */
 body {
     background-color: rgb(209, 200, 235);
     box-sizing: border-box;
@@ -6,6 +7,7 @@ body {
     padding: 0;
 }
 
+/* Styling des Hauptbereichs */
 main {
     display: flex;
     flex-direction: column;
@@ -16,6 +18,7 @@ main {
     width: 80vw;
 }
 
+/* Styling des Bereiches aller Teammitglieder */
 #teammembers {
     display: flex;
     flex-direction: column;
@@ -24,6 +27,7 @@ main {
     align-self: center;
 }
 
+/* Styling der einzelnen Teammitglieder*/
 .member {
     display: flex;
     flex-direction: row;
@@ -34,7 +38,7 @@ main {
     margin-bottom: 20px;
 }
 
-
+/* Styling der einzelnen Teammitglieder in umgekehrter Reihenfolge */
 .memberReverse {
     display: flex;
     flex-direction: row-reverse;
@@ -46,6 +50,7 @@ main {
     object-fit: cover;
 }
 
+/* Styling der Bilder der Teammitglieder */
 .memberImage {
     border-radius: 50%;
     border: 2px solid black;
@@ -57,6 +62,7 @@ main {
     aspect-ratio: 1/1;
 }
 
+/* Styling der Bilder der Teammitglieder in umgekehrter Reihenfolge */
 .memberImageReverse {
     border-radius: 50%;
     border: 2px solid black;
@@ -68,6 +74,7 @@ main {
     aspect-ratio: 1/1;
 }
 
+/* Styling des Textes der Teammitglieder */
 .memberText {
     display: flex;
     flex-direction: column;
@@ -76,6 +83,7 @@ main {
     max-width: 500px;
 }
 
+/* Styling des Textes der Teammitglieder in umgekehrter Reihenfolge */
 .memberTextReverse {
     display: flex;
     flex-direction: column;
@@ -83,7 +91,7 @@ main {
     max-width: 500px;
 }
 
-
+/* Styling der Überschriften */
 h2 {
     font-family: cubano, sans-serif;
     font-style: normal;
@@ -106,7 +114,8 @@ footer {
 }
 
 
-/*Responsive*/
+/*RESPONSIVE*/
+/* Anpassungen für mobile Geraete */
 @media (max-width: 600px) {
     .member {
         flex-direction: column-reverse;
@@ -137,5 +146,4 @@ p {
             height: 80vw;
 
         }
-
 }

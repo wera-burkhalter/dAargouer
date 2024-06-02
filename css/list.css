@@ -1,3 +1,4 @@
+/* generelle Einstellungen für den gesamten Body */
 body {
     background-color: rgb(232, 250, 234);
     box-sizing: border-box;
@@ -5,13 +6,14 @@ body {
     padding: 0;
 }
 
+/* Einstellungen für den Hauptbereich */
 main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
-
+/* Styling der InfoBoxdn */
 #aare-app {
     display: flex;
     flex-direction: row;
@@ -19,6 +21,7 @@ main {
     justify-content: center;
 }
 
+/* Styling des Suchfeldes */
 #search-container {
     display: flex;
     justify-content: center;
@@ -26,7 +29,6 @@ main {
     /* Abstand oben innerhalb des Containers */
     padding-bottom: 50px;
 }
-
 
 input {
     display: flex;

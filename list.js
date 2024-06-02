@@ -71,7 +71,7 @@ async function filterLocations() {
 // Suchanfrage anzeigen
 function displayResults(results) {
     const app = document.querySelector("#aare-app");
-    app.innerHTML = ''; // Clear previous results
+    app.innerHTML = ''; // vorherige Ergebnisse löschen
 
     results.forEach(result => {
         let location = result.aare.location;
